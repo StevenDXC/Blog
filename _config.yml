@@ -6,7 +6,7 @@ email: chengxd3@gmail.com
 description: "About Mobile App develop"
 keyword: ""
 url: "https://stevendxc.github.io/Blog"              # your host, for absolute URL
-baseurl: "https://stevendxc.github.io/Blog"                             # for example, '/blog' if your blog hosted on 'host/blog'https://stevendxc.github.io/Blog
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'https://stevendxc.github.io/Blog
 
 
 
