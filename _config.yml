@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: chengxd3@gmail.com
 description: "About Mobile App develop"
 keyword: ""
-url: "https://stevendxc.github.io/Blog/"              # your host, for absolute URL
-baseurl: "https://stevendxc.github.io/Blog/"                             # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://stevendxc.github.io/Blog"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
@@ -23,17 +23,16 @@ twitter_username:   chengxd
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# permalink: pretty
+# paginate: 5
+# exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+# anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+gems: [jekyll-paginate,jekyll-gist]
 
 
 
@@ -41,9 +40,19 @@ gems: [jekyll-paginate]
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks
+
+
+
+# use Github Flavored Markdown !important
 
 
 
@@ -51,19 +60,19 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: blog
+# duoshuo_username: blog
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: false                     # set to false if you want to use Comment without Sharing
 
 
 
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id:
-# Google Analytics
-ga_track_id: ''            # Format: UA-xxxxxx-xx
-ga_domain:
+# ba_track_id:
+# # Google Analytics
+# ga_track_id: ''            # Format: UA-xxxxxx-xx
+# ga_domain:
 
 
 
@@ -77,7 +86,3 @@ sidebar-avatar: img/avatar.jpg      # use absolute URL, seeing it's used in both
 # Featured Tags
 featured-tags: false                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
-
-
-# Friends
