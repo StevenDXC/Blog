@@ -40,8 +40,10 @@ github pages的特点：
    ```javascript
 git clone xxxxxxxxxxx.git(创建的Repository的地址)
    ```
-4.创建gh-pages分支，github pages规定，只有该分支的的页面，才会生成网页文件
+4.创建gh-pages分支
 ------
+github pages规定，只有该分支的的页面，才会生成网页文件
+
 
    ```javascript
 git checkout --orphan gh-pages
