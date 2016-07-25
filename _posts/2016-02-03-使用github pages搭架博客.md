@@ -163,18 +163,16 @@ http://jekyllthemes.org/
 9.更新配置和文章到github pages
 -----
 
-  
 *   使用bundler
 
    ```javascript
 bundle update github-pages
    ```
   或者
-
+  
   ```javascript
 bundle update
   ```
-
 *  使用git
 
   ```javascript
