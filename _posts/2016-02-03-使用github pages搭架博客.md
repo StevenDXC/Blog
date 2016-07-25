@@ -39,7 +39,6 @@ github pages的特点：
 
    ```javascript
    git checkout --orphan gh-pages
-
    ```
   以后的所有操作都在该分支下完成，请勿切换分支。
 
@@ -59,7 +58,6 @@ Jekyll是一个静态站点生成工具，它可以根据源码生成静态HTML�
 
   ```javascript
    gem install bundler
-
    ```
 
    使用bundler安装Jekyll，要安装Jekyll首先要在项目文件夹中添加一个配置文件（Gemfile），用来声明用到的插件。文本内容：
@@ -98,8 +96,7 @@ Jekyll安装完成之后，项目中会自动生成一些文件和文件夹。�
   kramdown:
   input: GFM
   ```
-
-   其中redcarpet是一个markdown文件解析引擎，它可以把_posts下的.md文件解析为静态HTML页面。具体的安装和配置参考：
+  其中redcarpet是一个markdown文件解析引擎，它可以把_posts下的.md文件解析为静态HTML页面。具体的安装和配置参考：
    https://jekyllrb.com/docs/configuration/
 
   添加文章：
@@ -120,14 +117,14 @@ Jekyll安装完成之后，项目中会自动生成一些文件和文件夹。�
   ---
   ```
 
-   格式已 ---开始和结束，不同的主题可以配置不同的变量
+ 格式已 ---开始和结束，不同的主题可以配置不同的变量
 
    变量
    在文章中可以使用声明的变量，官方说明：http://jekyllrb.com/docs/variables/
    使用格式，如使用标题：
 
   ```javascript
-   <title>{{ page.title }}</title>
+   {{ page.title }}
   ```
 
 7.预览
