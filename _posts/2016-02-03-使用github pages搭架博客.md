@@ -57,26 +57,26 @@ Jekyll是一个静态站点生成工具，它可以根据源码生成静态HTML�
   查看ruby版本：
 
    ```javascript
-   ruby --version
+ruby --version
    ```
 
    安装Bundler，Bundler是一个ruby项目管理工具，可以安装编译Ruby项目依赖的第三方工具或类库
 
   ```javascript
-   gem install bundler
+gem install bundler
    ```
 
    使用bundler安装Jekyll，要安装Jekyll首先要在项目文件夹中添加一个配置文件（Gemfile），用来声明用到的插件。文本内容：
 
   ```javascript
-   source 'https://rubygems.org'
-   gem 'github-pages', group: :jekyll_plugins
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
   ```
 
    然后安装Jekyll
 
   ```javascript
-  bundle install
+bundle install
   ```
 
 6.配置项目
@@ -85,10 +85,10 @@ Jekyll是一个静态站点生成工具，它可以根据源码生成静态HTML�
 Jekyll安装完成之后，项目中会自动生成一些文件和文件夹。主要的有
 
   ```javascript
-   |--- _config.yml 项目配置文件
-   |--- _layouts    通用布局文件，包含各个页面的默认布局
-   |--- _includes   模板文件夹，包含默认的页面头部，底部和导航栏等的样式
-   |--- _posts      用来存放博客文章的文件夹
+|--- _config.yml 项目配置文件
+|--- _layouts    通用布局文件，包含各个页面的默认布局
+|--- _includes   模板文件夹，包含默认的页面头部，底部和导航栏等的样式
+|--- _posts      用来存放博客文章的文件夹
   ```
 
   _config.yml，用来配置站点的名称，url,作者信息，页面变量，markdown解析等，不同主题的配置不一样。以选择的主题配置为准。
@@ -97,10 +97,10 @@ Jekyll安装完成之后，项目中会自动生成一些文件和文件夹。�
   markdown配置，例如：
 
   ```javascript
-  highlighter: rouge
-  markdown: redcarpet
-  kramdown:
-  input: GFM
+highlighter: rouge
+markdown: redcarpet
+kramdown:
+nput: GFM
   ```
   其中redcarpet是一个markdown文件解析引擎，它可以把_posts下的.md文件解析为静态HTML页面。具体的安装和配置参考：
    https://jekyllrb.com/docs/configuration/
@@ -112,15 +112,15 @@ Jekyll安装完成之后，项目中会自动生成一些文件和文件夹。�
   按照Jekyll模板的定义，每个模板都要在头部定义一些变量，例如：
 
   ```javascript
-  ---
-  layout:     post   # 指定使用的模板文件，“_layout” 目录下的模板文件名决定变量名
-  title:      title  # 文章的标题
-  date:       date   # 覆盖文章名中的日期
-  category:   blog   # 文章的类别
-  description: description
-  published:  true   # default true 设置 “false” 后，文章不会显示
-  permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设定的文章发布格式
-  ---
+---
+layout:     post   # 指定使用的模板文件，“_layout” 目录下的模板文件名决定变量名
+title:      title  # 文章的标题
+date:       date   # 覆盖文章名中的日期
+category:   blog   # 文章的类别
+description: description
+published:  true   # default true 设置 “false” 后，文章不会显示
+permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设定的文章发布格式
+---
   ```
 
  格式已 ---开始和结束，不同的主题可以配置不同的变量
@@ -130,7 +130,7 @@ Jekyll安装完成之后，项目中会自动生成一些文件和文件夹。�
    使用格式，如使用标题：
 
   ```javascript
-   {{ page.title }}
+{{ page.title }}
   ```
 
 7.预览
@@ -140,7 +140,7 @@ Jekyll安装完成之后，项目中会自动生成一些文件和文件夹。�
 编译并运行项目：
 
    ```javascript
-   bundle exec jekyll serve
+bundle exec jekyll serve
    ```
 运行该命令之后，Jekyll会编译整个项目，在项目文件中生成_site文件夹，里面就是根据配置生成的站点。
 在浏览器器中打开 http://localhost:4000 就可以看到站点和生成的文章。
@@ -164,18 +164,18 @@ http://jekyllthemes.org/
   *   使用bundler
 
    ```javascript
-    bundle update github-pages
+bundle update github-pages
    ```
   或者
 
   ```javascript
-  bundle update
+bundle update
   ```
 
   *  使用git
 
   ```javascript
-    git add . //添加所有文件到版本索引
-    git push origin github-pages //同步文件到远程仓库
+git add . //添加所有文件到版本索引
+git push origin github-pages //同步文件到远程仓库
   ```
   同步完成之后稍等一会，在浏览器中打开https://(github用户名).github.io/(Repository名称)就可看到刚刚搭建的博客了
