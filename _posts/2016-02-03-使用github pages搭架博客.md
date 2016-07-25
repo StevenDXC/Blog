@@ -108,12 +108,12 @@ nput: GFM
   ```
   其中redcarpet是一个markdown文件解析引擎，它可以把_posts下的.md文件解析为静态HTML页面。具体的安装和配置参考：
    https://jekyllrb.com/docs/configuration/
-
- * 添加文章：
+   
+* 添加文章：
  
   将写好的文章（Markdown文件或HTML文件）放到 _posts文件下，github pages会自动解析，添加到页面中。文章名名称的格式是固定。按照”yyyy-MM-dd-文章名称“的格式命名，Jekyll会自动按照日期排序添加文章。
 
- * 头部定义：
+* 头部定义：
  
   按照Jekyll模板的定义，每个模板都要在头部定义一些变量，例如：
 
@@ -131,7 +131,7 @@ permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设�
 
  格式以 ---开始和结束，不同的主题可以配置不同的变量
 
- * 变量
+* 变量
    在文章中可以使用声明的变量，官方说明：http://jekyllrb.com/docs/variables/
    使用格式，如使用标题：
 
