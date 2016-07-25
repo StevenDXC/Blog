@@ -134,7 +134,8 @@ permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设�
 * 变量
 
  在文章中可以使用声明的变量，官方说明：http://jekyllrb.com/docs/variables/
-   使用格式，如使用标题：
+ 
+ 使用格式，如使用标题：
 
   ```javascript
 {{ page.title }} //{\\{ page.title }\\}
