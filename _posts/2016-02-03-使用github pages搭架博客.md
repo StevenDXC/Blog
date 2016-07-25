@@ -132,7 +132,8 @@ permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设�
  格式以 ---开始和结束，不同的主题可以配置不同的变量
 
 * 变量
-   在文章中可以使用声明的变量，官方说明：http://jekyllrb.com/docs/variables/
+
+ 在文章中可以使用声明的变量，官方说明：http://jekyllrb.com/docs/variables/
    使用格式，如使用标题：
 
   ```javascript
@@ -161,7 +162,6 @@ http://jekyllthemes.org/
 
 里面有海量的Jekyll主题，都是在github上开源的，可以直接使用，也可以自己再次修改自定义。
 每个主题基本都有主题的配置方法说明，比较简单和方便。
-
 
 
 9.更新配置和文章到github pages
