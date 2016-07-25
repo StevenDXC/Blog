@@ -38,8 +38,7 @@ github pages的特点：
 ------
 
    ```javascript
-    git clone xxxxxxxxxxx.git(创建的Repository的地址)
-
+git clone xxxxxxxxxxx.git(创建的Repository的地址)
    ```
 4.创建gh-pages分支，github pages规定，只有该分支的的页面，才会生成网页文件
 ------
