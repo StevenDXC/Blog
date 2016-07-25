@@ -137,7 +137,7 @@ permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设�
    使用格式，如使用标题：
 
   ```javascript
-{{ page.title }} //{{ page.title }}
+{{ page.title }} //{\\{ page.title }\\}
   ```
 
 7.预览
