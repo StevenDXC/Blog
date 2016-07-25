@@ -163,7 +163,8 @@ http://jekyllthemes.org/
 9.更新配置和文章到github pages
 -----
 
-  *   使用bundler
+  
+*   使用bundler
 
    ```javascript
 bundle update github-pages
@@ -174,7 +175,7 @@ bundle update github-pages
 bundle update
   ```
 
-  *  使用git
+*  使用git
 
   ```javascript
 git add . //添加所有文件到版本索引
