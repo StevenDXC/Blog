@@ -44,7 +44,7 @@ git clone xxxxxxxxxxx.git(创建的Repository的地址)
 ------
 
    ```javascript
-   git checkout --orphan gh-pages
+git checkout --orphan gh-pages
    ```
   以后的所有操作都在该分支下完成，请勿切换分支。
 
