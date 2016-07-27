@@ -13,7 +13,7 @@ Material design风格的输入框的IOS版本，swift语言实现
 
 Demo:
 
-![image](../img/post/fl_textfield.gif)
+![image]({{ site.baseurl }}/img/post/fl_textfield.gif)
 
 使用:
 
