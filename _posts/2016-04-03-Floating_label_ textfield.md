@@ -34,17 +34,13 @@ textField.highLightColor = UIColor.blueColor()
 显示校验失败的错误提示：
 
 ```swift
-
 textField.setErrorMsg("error message")
-
 ```
 
 隐藏错误提示
 
 ```swift
-
 textField.setErrorMsg(nil)
-
 ```
 
 显示已输入的字符数和最大能输入的字符数量：
@@ -54,4 +50,4 @@ textField.showMaxInputLength(true)
 textField.maxInputLength = 20;
 ```
 
-* source:https://github.com/StevenDXC/DxMDTextField
+#source:https://github.com/StevenDXC/DxMDTextField
