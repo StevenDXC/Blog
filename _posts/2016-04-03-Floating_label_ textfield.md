@@ -50,4 +50,4 @@ textField.showMaxInputLength(true)
 textField.maxInputLength = 20;
 ```
 
-#source:https://github.com/StevenDXC/DxMDTextField
+*source:https://github.com/StevenDXC/DxMDTextField
