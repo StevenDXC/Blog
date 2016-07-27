@@ -15,6 +15,7 @@ Demo:
 
 ![image]({{ site.baseurl }}/img/post/fl_textfield.gif)
 
+
 使用:
 
 
@@ -36,7 +37,7 @@ textField.highLightColor = UIColor.blueColor()
 textField.setErrorMsg("error message")
 ```
 
-隐藏错误提示
+隐藏错误提示:
 
 ```swift
 textField.setErrorMsg(nil)
