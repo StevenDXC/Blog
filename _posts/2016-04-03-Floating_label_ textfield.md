@@ -24,7 +24,7 @@ Demo:
 let textField = MDTextField.init(frame: CGRectMake(x, y, width, height))
 ```
 
-设置高亮颜色
+设置高亮颜色:
 
 ```swift
 textField.highLightColor = UIColor.blueColor()
