@@ -11,7 +11,7 @@ tags:
 
 Material design风格的输入框的IOS版本，swift语言实现
 
-预览:
+Demo:
 
 ![image](https://github.com/StevenDXC/DxMDTextField/blob/master/img/demo.gif)
 
