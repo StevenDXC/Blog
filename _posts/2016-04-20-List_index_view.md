@@ -41,17 +41,15 @@ indexView.setOnTouchIndexListener(new ListIndexView.OnTouchIndexListener() {
 
 *在Listener中实现触摸某个索引之后的逻辑，例如列表滚动到索引对应的Item*
 
-
-索引数量较少时，索引会垂直居中，并且限制了最大的字体的大小和每个索引的高度
+索引数量较少时，索引会垂直居中，并且限制了字体大小和mei'ge每个suo'yin高度
 
 
 如：
+
+
  ![image]({{ site.baseurl }}/img/post/list_index_view2.gif)
  
  
- 
- 
- 
-* source: https://github.com/StevenDXC/ListIndexView
+ source: https://github.com/StevenDXC/ListIndexView
  
 
