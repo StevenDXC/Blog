@@ -1,22 +1,51 @@
 ---
 layout:     post
-title:      "Calendar icon"
+title:      "List Index View"
 subtitle:   ""
 date:       2015-04-15 9:00:00
 author:     "steven"
 catalog:    true
 tags:
-    - design
+    - Android
 ---
 
-####日历图标两枚
+#### android 列表索引View，点击或移动有放大效果
 
-1:
-
-![image]({{ site.baseurl }}/img/post/ic_calendar.png)
+ ![image]({{ site.baseurl }}/img/post/list_index_view.gif)
 
 
-2:
 
+布局:
 
-![image]({{ site.baseurl }}/img/post/ic_calendar1.png)
+```xml
+<com.dxc.listindexview.widget.ListIndexView
+        android:id="@+id/index_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center_vertical" />
+```
+
+*索引view的宽度是match_parent*
+
+代码:
+
+```java
+indexView.setIndexLetters(String[]{"A","B",....});
+indexView.setOnTouchIndexListener(new ListIndexView.OnTouchIndexListener() {
+            @Override
+            public void onTouchIndex(int index) {
+                
+            }
+        });
+```
+
+*在Listener中实现触摸某个索引之后的逻辑，例如列表滚动到索引对应的Item*
+
+索引数量较少时，索引会垂直居中，并且设置了最大的字体大小和高度，如：
+
+ ![image]({{ site.baseurl }}/img/post/list_index_view2.gif)
+ 
+ 
+ source: https://github.com/StevenDXC/ListIndexView
+ 
+
