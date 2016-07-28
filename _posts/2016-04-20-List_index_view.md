@@ -50,6 +50,6 @@ indexView.setOnTouchIndexListener(new ListIndexView.OnTouchIndexListener() {
  ![image]({{ site.baseurl }}/img/post/list_index_view2.gif)
  
  
- source: https://github.com/StevenDXC/ListIndexView
+* source: https://github.com/StevenDXC/ListIndexView
  
 
