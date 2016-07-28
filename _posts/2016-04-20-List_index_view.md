@@ -24,6 +24,7 @@ tags:
         android:layout_height="match_parent"
         android:layout_gravity="right|center_vertical" />
 ```
+
 *索引view的宽度是match_parent*
 
 代码:
@@ -37,12 +38,17 @@ indexView.setOnTouchIndexListener(new ListIndexView.OnTouchIndexListener() {
             }
         });
 ```
+
 *在Listener中实现触摸某个索引之后的逻辑，例如列表滚动到索引对应的Item*
 
 
-索引数量较少时，索引会垂直居中，并且设置了最大的字体大小和高度
+索引数量较少时，索引会垂直居中，并且限制了最大的字体的大小和每个索引的高度
 
+
+如：
  ![image]({{ site.baseurl }}/img/post/list_index_view2.gif)
+ 
+ 
  
  
  
