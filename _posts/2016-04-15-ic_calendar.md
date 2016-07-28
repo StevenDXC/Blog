@@ -1,54 +1,22 @@
 ---
 layout:     post
-title:      "Floating label textfield"
+title:      "Calendar icon"
 subtitle:   ""
-date:       2015-04-03 13:00:00
+date:       2015-04-15 9:00:00
 author:     "steven"
 catalog:    true
 tags:
-    - IOS
+    - design
 ---
 
-####Material design风格的输入框的IOS版本，swift语言实现
+####日历图标两枚
 
-Demo:
+1:
 
-![image]({{ site.baseurl }}/img/post/fl_textfield.gif)
-
-
-使用:
+![image]({{ site.baseurl }}/img/post/ic_calendar.png)
 
 
-初始化：
-
-```swift
-let textField = MDTextField.init(frame: CGRectMake(x, y, width, height))
-```
-
-设置高亮颜色:
-
-```swift
-textField.highLightColor = UIColor.blueColor()
-```
-
-显示校验失败的错误提示：
-
-```swift
-textField.setErrorMsg("error message")
-```
-
-隐藏错误提示:
-
-```swift
-textField.setErrorMsg(nil)
-```
-
-显示已输入的字符数和最大能输入的字符数量：
-
-```swift
-textField.showMaxInputLength(true)
-textField.maxInputLength = 20;
-```
+2:
 
 
-* source:https://github.com/StevenDXC/DxMDTextField
+![image]({{ site.baseurl }}/img/post/ic_calendar1.png)
