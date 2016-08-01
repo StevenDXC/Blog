@@ -11,7 +11,7 @@ tags:
 
 ####IOS Loading HUD，可以显示加载成功，失败，或无数据的状态
 
-基于https://github.com/pkluz/PKHUD和https://github.com/iamim2/OneLoadingAnimation做了部分修改，去除了无用的代码和部分动画效果，并添加了无结果时的动画
+基于https://github.com/pkluz/PKHUD 和  https://github.com/iamim2/OneLoadingAnimation做了部分修改，去除了无用的代码和部分动画效果，并添加了无结果时的动画
 
 
 Demo:
