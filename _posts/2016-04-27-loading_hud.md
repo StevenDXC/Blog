@@ -20,26 +20,32 @@ Demo:
 
 
 show:
+
 ```swift
 DxLoadingHUD.sharedInstance.show();
 ```
 
 加载成功：
+
 ```swift
 DxLoadingHUD.sharedInstance.showSuccessAnimation();
 ```
 
 加载失败：
+
+
 ```swift
 DxLoadingHUD.sharedInstance.showErrorAnimation();
 ```
 
 无结果：
+
 ```swift
 DxLoadingHUD.sharedInstance.showEmptyAnimation();
 ```
 
 隐藏:
+
 ```swift
 DxLoadingHUD.sharedInstance.hide(animated:true);
 ```
