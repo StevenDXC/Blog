@@ -24,22 +24,22 @@ show:
 DxLoadingHUD.sharedInstance.show();
 ```
 
-success:
+加载成功：
 ```swift
 DxLoadingHUD.sharedInstance.showSuccessAnimation();
 ```
 
-failed:
+加载失败：
 ```swift
 DxLoadingHUD.sharedInstance.showErrorAnimation();
 ```
 
-empty:
+无结果：
 ```swift
 DxLoadingHUD.sharedInstance.showEmptyAnimation();
 ```
 
-hide:
+隐藏:
 ```swift
 DxLoadingHUD.sharedInstance.hide(animated:true);
 ```
