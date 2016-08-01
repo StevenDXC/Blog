@@ -19,36 +19,30 @@ Demo:
 使用:
 
 
-show：
-
+show:
 ```swift
-let textField = MDTextField.init(frame: CGRectMake(x, y, width, height))
+DxLoadingHUD.sharedInstance.show();
 ```
 
-设置高亮颜色:
-
+success:
 ```swift
-textField.highLightColor = UIColor.blueColor()
+DxLoadingHUD.sharedInstance.showSuccessAnimation();
 ```
 
-显示校验失败的错误提示：
-
+failed:
 ```swift
-textField.setErrorMsg("error message")
+DxLoadingHUD.sharedInstance.showErrorAnimation();
 ```
 
-隐藏错误提示:
-
+empty:
 ```swift
-textField.setErrorMsg(nil)
+DxLoadingHUD.sharedInstance.showEmptyAnimation();
 ```
 
-显示已输入的字符数和最大能输入的字符数量：
-
+hide:
 ```swift
-textField.showMaxInputLength(true)
-textField.maxInputLength = 20;
+DxLoadingHUD.sharedInstance.hide(animated:true);
 ```
 
 
-* source:https://github.com/StevenDXC/DxMDTextField
+* source:https://github.com/StevenDXC/DxLoadingHUD
