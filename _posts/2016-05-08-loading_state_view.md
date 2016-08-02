@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:      "LoadingStateView”
+title:      "LoadingStateView"
 subtitle:   ""
-date:       2015-05-08 14:00:00
+date:       2015-04-18 13:00:00
 author:     "steven"
 catalog:    true
 tags:
-    - Android
+    - android
 ---
 
 ####android LoadingStateView，显示加载，加载成功，失败和无数据的状态
@@ -60,7 +60,7 @@ mLoadingView.setViewState(LoadingStateView.STATE_EMPTY_RESULT);
 
 loading:
 ```java
- mLoadingView.setViewState(LoadingStateView.STATE_LOADING);
+mLoadingView.setViewState(LoadingStateView.STATE_LOADING);
 ```
 
 * source:https://github.com/StevenDXC/LoadingStateView
