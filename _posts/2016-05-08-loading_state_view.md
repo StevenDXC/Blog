@@ -17,6 +17,7 @@ Demo:
 
 
 layout:
+
 ```xml
  <com.dxc.loadingstateview.widget.LoadingStateView
         android:id="@+id/loading_view"
@@ -32,6 +33,7 @@ layout:
 
 
 可以自定义：
+
 ```xml
 大小：
 view_size:large/small
@@ -44,6 +46,7 @@ app:color_failed="@color/failed_color"
 ```
 
 加载成功:
+
 ```java
 mLoadingView.setViewState(LoadingStateView.STATE_SUCCESS);
 ```
@@ -54,11 +57,13 @@ mLoadingView.setViewState(LoadingStateView.STATE_FAILED);
 ```
 
 无数据时:
+
 ```java
 mLoadingView.setViewState(LoadingStateView.STATE_EMPTY_RESULT);
 ```
 
 loading:
+
 ```java
 mLoadingView.setViewState(LoadingStateView.STATE_LOADING);
 ```
