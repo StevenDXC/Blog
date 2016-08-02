@@ -42,7 +42,6 @@ app:color_empty="@color/empty_color"
 app:color_normal="@color/loading_color"
 app:color_success="@color/success_color"
 app:color_failed="@color/failed_color"
-app:color_failed="@color/failed_color"
 ```
 
 加载成功:
