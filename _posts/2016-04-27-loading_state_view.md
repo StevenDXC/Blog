@@ -6,7 +6,7 @@ date:       2015-05-08 14:00:00
 author:     "steven"
 catalog:    true
 tags:
-    - IOS
+    - Android
 ---
 
 ####android LoadingStateView，显示加载，加载成功，失败和无数据的状态
