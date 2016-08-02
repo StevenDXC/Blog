@@ -9,7 +9,6 @@ tags:
     - Android
 ---
 
-
 ####android LoadingStateView，显示加载，加载成功，失败和无数据的状态
 
 Demo:
@@ -56,13 +55,13 @@ mLoadingView.setViewState(LoadingStateView.STATE_FAILED);
 
 无数据时:
 ```java
- mLoadingView.setViewState(LoadingStateView.STATE_EMPTY_RESULT);
+mLoadingView.setViewState(LoadingStateView.STATE_EMPTY_RESULT);
 ```
 
 loading:
- ```java
+```java
  mLoadingView.setViewState(LoadingStateView.STATE_LOADING);
- ```
+```
 
 * source:https://github.com/StevenDXC/LoadingStateView
 
