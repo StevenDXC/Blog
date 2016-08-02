@@ -16,8 +16,6 @@ Demo:
 ![image]({{ site.baseurl }}/img/post/loading_state_view.gif)
 
 
-使用:
-
 layout:
 ```xml
  <com.dxc.loadingstateview.widget.LoadingStateView
@@ -31,6 +29,8 @@ layout:
         app:color_success="@color/success_color"
         app:color_failed="@color/failed_color"/>
 ```
+
+
 可以自定义：
 ```xml
 大小：
