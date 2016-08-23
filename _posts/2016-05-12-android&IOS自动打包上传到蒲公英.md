@@ -69,6 +69,7 @@ IOS打包：
 -----
 
 clean:
+
 ```java
 xcodebuild clean
 ```
@@ -88,6 +89,7 @@ xcodebuild -workspace xxx.xcworkspace -scheme xxxx -configuration debug -derived
 执行后会生成app文件
 
 打包ipa：
+
 ```java
 xcrun -sdk iphoneos PackageApplication -v app路径 -o 存放ipa文件路径/文件名.ipa
 ```
