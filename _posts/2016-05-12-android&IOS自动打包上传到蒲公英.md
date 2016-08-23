@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "LoadingStateView”
+title:      "Android&IOS自动打包上传到蒲公英"
 subtitle:   ""
 date:       2015-05-08 14:00:00
 author:     "steven"
@@ -9,61 +9,94 @@ tags:
     - Android
 ---
 
-####android LoadingStateView，显示加载，加载成功，失败和无数据的状态
+####打包脚本基于Python实现，只能在Mac系统上运行
 
-Demo:
-
-![image]({{ site.baseurl }}/img/post/loading_state_view.gif)
+android studio项目打包命令：
 
 
-使用:
-
-layout:
-```xml
- <com.dxc.loadingstateview.widget.LoadingStateView
-        android:id="@+id/loading_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:view_size="large"
-        app:color_empty="@color/empty_color"
-        app:color_normal="@color/loading_color"
-        app:color_success="@color/success_color"
-        app:color_failed="@color/failed_color"/>
-```
-可以自定义：
-```xml
-大小：
-view_size:large/small
-状态颜色：
-app:color_empty="@color/empty_color"
-app:color_normal="@color/loading_color"
-app:color_success="@color/success_color"
-app:color_failed="@color/failed_color"
-app:color_failed="@color/failed_color"
-```
-
-加载成功:
 ```java
-mLoadingView.setViewState(LoadingStateView.STATE_SUCCESS);
+//clean
+./gradlew clean
+//debug 版本
+./gradlew assembleDebug
+//realse版本
+./gradlew assembleRelease
+//可以和clean 合起来用
+./gradlew clean assembleRelease
 ```
 
-加载失败:
+默认会打包所有的渠道版本，可在productFlavors中配置，如：
+
+
 ```java
-mLoadingView.setViewState(LoadingStateView.STATE_FAILED);
+productFlavors {
+    baidu {
+      manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+    }
+    wandoujia {
+      manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+    }
+    yingyongbao {
+      manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+    }
+  }
 ```
 
-无数据时:
+UMENG_CHANNEL_VALUE 为umeng统计的渠道的Placeholder
+
+配置打包APK的存放路径：
+
 ```java
-mLoadingView.setViewState(LoadingStateView.STATE_EMPTY_RESULT);
-```
+def releaseTime() {
+  return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
 
-loading:
+applicationVariants.all { variant ->
+       variant.outputs.each { output ->
+         if (outputFile != null && outputFile.name.endsWith('.apk')) {
+          def fileName = "app_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+          output.outputFile = new File(outputFile.parent, fileName)
+        }
+      }
+   }
+```
+配置之后也可以打包指定的渠道：
+
 ```java
- mLoadingView.setViewState(LoadingStateView.STATE_LOADING);
+./gradlew assembleWandoujiaRelease
 ```
 
-* source:https://github.com/StevenDXC/LoadingStateView
+IOS打包：
+-----
 
+clean:
+```java
+xcodebuild clean
+```
 
-* swift版本:https://github.com/StevenDXC/DxLoadingHUD
+若没有使用cocoapods管理第三方类库:
+
+```java
+xcodebuild build   //默认build realse
+```
+
+若使用了cocoaPods管理第三方类库，则编译时需指定xcworkspace文件和scheme
+```java
+xcodebuild -workspace xxx.xcworkspace -scheme xxxx -configuration debug -derivedDataPath xxx(app文件存放的路径) ONLY_ACTIVE_ARCH=NO
+```
+执行后会生成app文件
+
+打包ipa：
+```java
+xcrun -sdk iphoneos PackageApplication -v app路径 -o 存放ipa文件路径/文件名.ipa
+```
+
+上传到蒲公英
+------
+
+打包完成之后可以使用curl上传到蒲公英，然后通知测试人员开始进行测试
+蒲公英开放了上传应用api
+```java
+curl -F "file=@上传文件路径" -F "uKey=用户key" -F "_api_key=API Key" http://www.pgyer.com/apiv1/app/upload
+```
+执行改命令之后可以自动完成上传发布，然后就可以测试了
