@@ -9,10 +9,9 @@ tags:
     - Android
 ---
 
-####打包脚本基于Python实现，只能在Mac系统上运行
+打包脚本基于Python实现，只能在Mac系统上运行
 
 android studio项目打包命令：
-
 
 ```java
 //clean
@@ -81,9 +80,11 @@ xcodebuild build   //默认build realse
 ```
 
 若使用了cocoaPods管理第三方类库，则编译时需指定xcworkspace文件和scheme
+
 ```java
 xcodebuild -workspace xxx.xcworkspace -scheme xxxx -configuration debug -derivedDataPath xxx(app文件存放的路径) ONLY_ACTIVE_ARCH=NO
 ```
+
 执行后会生成app文件
 
 打包ipa：
@@ -96,7 +97,9 @@ xcrun -sdk iphoneos PackageApplication -v app路径 -o 存放ipa文件路径/文
 
 打包完成之后可以使用curl上传到蒲公英，然后通知测试人员开始进行测试
 蒲公英开放了上传应用api
+
 ```java
 curl -F "file=@上传文件路径" -F "uKey=用户key" -F "_api_key=API Key" http://www.pgyer.com/apiv1/app/upload
 ```
+
 执行改命令之后可以自动完成上传发布，然后就可以测试了
