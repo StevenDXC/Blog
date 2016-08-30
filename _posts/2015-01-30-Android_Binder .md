@@ -45,6 +45,8 @@ IBinder 与 Binder
 
 Android系统将一个可远程操作的应用定义为 IBinder，在这个接口中定义了一个可远程调用对象应该具有的属性和方法，在代码中实际使用的Binder 也都是继承自 IBinder 对象。 IBinder 抽象了远程调用的接口，任何一个可远程调用的对象都应该实现这个接口
 
+
+```java
 public interface IBinder {
     ... ...
 
@@ -70,6 +72,7 @@ public interface IBinder {
     ... ...
 
 }
+```
 
 transact方法会根据Uid 和 Pid （用户id和进程id）进行相应的校验，校验通过后，将相应的数据写入 writeTransactionData，其后在 waitForResponse 里面读取前面写入的值，并执行相应的方法，最后返回结果。
 由于 IBinder 对象是一个高度抽象的结构，直接使用这个接口对于应用层的开发者而言学习成本太高，需要涉及到不少本地实现，因而 Android 实现了 Binder 作为 IBinder 的抽象类，提供了一些默认的本地实现，当开发者需要自定义实现的时候，只需要重写 Binder 中的 protected boolean onTransact(int code, Parcel data, Parcel reply, int flags) 方法即可。
