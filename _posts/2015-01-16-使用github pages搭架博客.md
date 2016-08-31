@@ -9,7 +9,7 @@ tags:
     - blog
 ---
 
-做为一个程序员，有时候需要记录一些解决问题的过程或一些想法，或者是新东西的学习，博客是个很好的解决方案。又可以分享帮助他人。但是又想做的不得不太一样，考察了下，最后选择了使用github pages来搭架。
+做为一个程序员，有时候需要记录一些解决问题的过程或一些想法，或者是新东西的学习，博客是个很好的解决方案。又可以分享帮助他人。但是又想做的个性一点，考察了下，最后选择了使用github pages来搭架。
 
 github pages的特点：
 
@@ -94,9 +94,9 @@ Jekyll安装完成之后，项目中会自动生成一些文件和文件夹。�
   ```
 
   _config.yml，用来配置站点的名称，url,作者信息，页面变量，markdown解析等，不同主题的配置不一样。以选择的主题配置为准。
-  
+
 * 基本配置
-  
+
   baseurl: 博客的路径，可以配置为申请的域名
   markdown配置，例如：
 
@@ -108,13 +108,13 @@ nput: GFM
   ```
   其中redcarpet是一个markdown文件解析引擎，它可以把_posts下的.md文件解析为静态HTML页面。具体的安装和配置参考：
    https://jekyllrb.com/docs/configuration/
-   
+
 * 添加文章：
- 
+
   将写好的文章（Markdown文件或HTML文件）放到 _posts文件下，github pages会自动解析，添加到页面中。文章名名称的格式是固定。按照”yyyy-MM-dd-文章名称“的格式命名，Jekyll会自动按照日期排序添加文章。
 
 * 头部定义：
- 
+
   按照Jekyll模板的定义，每个模板都要在头部定义一些变量，例如：
 
   ```javascript
@@ -134,8 +134,8 @@ permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设�
 * 变量
 
  在文章中可以使用声明的变量，官方说明：http://jekyllrb.com/docs/variables/
- 
- 
+
+
  使用格式，如使用标题：
 
   ```javascript
@@ -175,7 +175,7 @@ http://jekyllthemes.org/
 bundle update github-pages
    ```
   或者
-  
+
   ```javascript
 bundle update
   ```
