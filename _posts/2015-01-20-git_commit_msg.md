@@ -11,15 +11,17 @@ tags:
 
 使用Git时，每次提交代码，都要写 Commit message（提交说明），否则git就不允许提交本次改动。
 
+```java
 $ git commit -m "msg"
+```
 
 msg就是提交说明，默认个情况下写什么都行。但是一般情况下，应该简述下本次改动的内容和影响的范围。
-目前有多种填写规范，但是使用最广的还是[Angular规范](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)
+目前有多种填写规范，但是使用最广的还是[Angular规范](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)。
 
  Commit Message 的格式
  ---
 
- 包括三部分，Header,Body和Footer
+包括三部分，Header,Body和Footer
 
 ```java
 <type>(<scope>): <subject>
@@ -128,7 +130,7 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 验证
 ---
 
-validate-commit-msg是一个用来验证commit msg是否合规的脚步，用JS编写。需要配合ghooks使用。比较适合WEB前端开发。具体使用方法参看对应的说明。
+[validate-commit-msg](https://github.com/kentcdodds/validate-commit-msg)是一个用来验证commit msg是否合规的脚步，用JS编写。需要配合[ghooks](https://www.npmjs.com/package/ghooks)使用。比较适合WEB前端开发。具体使用方法参看对应的说明。
 
 
 git hook验证
@@ -136,4 +138,4 @@ git hook验证
 还可以使用[git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)来验证commit msg。
 每次提交的时候都会触发commit-msg的git hook.只需要在.git/hooks下的commit-msg文件中编写校验规则的shell脚本。提交代码的时候会自动执行改脚本，校验commit msg是否符合规范。
 
-在mac或Linux上git hook的脚本还支持python，所以可以用python来编写验证脚本。在windows上则需要先安装python。
+在mac或Linux上git hook的脚本还支持python，python支持正则表达式，所以可以使用python和正则表达式来验证commit msg。在windows上也可以，但是需要在windows上先安装python。
