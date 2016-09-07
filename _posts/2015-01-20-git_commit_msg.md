@@ -134,6 +134,6 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 
 git hookhai还还支持python,python支持正则表达式，所以在mac或Linux可以直接使用python和正则表达式来验证commit msg。在windows上也可以，但是需要在windows上先安装python。
 
-*第三方工具*
+#validate-commit-msg#
 
 [validate-commit-msg](https://github.com/kentcdodds/validate-commit-msg)是一个用来验证commit msg是否合规的脚步，用JS编写。需要配合[ghooks](https://www.npmjs.com/package/ghooks)使用。比较适合WEB前端开发。具体使用方法参看对应的说明。
