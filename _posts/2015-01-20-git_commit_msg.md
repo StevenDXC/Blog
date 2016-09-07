@@ -130,12 +130,10 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 验证
 ---
 
+可以使用[git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)来验证commit msg。每次提交的时候都会触发commit-msg的git hook.只需要在.git/hooks下的commit-msg文件中编写校验规则的shell脚本。提交代码的时候会自动执行改脚本，校验commit msg是否符合规范。
+
+git hookhai还还支持python,python支持正则表达式，所以在mac或Linux可以直接使用python和正则表达式来验证commit msg。在windows上也可以，但是需要在windows上先安装python。
+
+*第三方工具*
+
 [validate-commit-msg](https://github.com/kentcdodds/validate-commit-msg)是一个用来验证commit msg是否合规的脚步，用JS编写。需要配合[ghooks](https://www.npmjs.com/package/ghooks)使用。比较适合WEB前端开发。具体使用方法参看对应的说明。
-
-
-git hook验证
----
-还可以使用[git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)来验证commit msg。
-每次提交的时候都会触发commit-msg的git hook.只需要在.git/hooks下的commit-msg文件中编写校验规则的shell脚本。提交代码的时候会自动执行改脚本，校验commit msg是否符合规范。
-
-在mac或Linux上git hook的脚本还支持python，python支持正则表达式，所以可以使用python和正则表达式来验证commit msg。在windows上也可以，但是需要在windows上先安装python。
