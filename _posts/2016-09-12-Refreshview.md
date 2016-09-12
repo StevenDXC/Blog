@@ -54,3 +54,6 @@ scrollView.removeScrollObserver();
 3.圆弧完成，直接长度为0，scrollView滚动到顶端时，开始播放旋转动画
 
 4.刷新完成，向上移动隐藏refresh header.并重置状态
+
+
+>[Source](https://github.com/StevenDXC/DxRefreshView)
