@@ -9,11 +9,12 @@ tags:
     - IOS
 ---
 
-模仿锤子手机的下落刷新效果.基于swift 3.0编写
+模仿锤子手机的下拉刷新效果.基于swift 3.0编写
 
 demo:
 ---
 
+![image]({{ site.baseurl }}/img/post/refresh_header.gif)
 
 Usage:
 ---
@@ -23,7 +24,6 @@ scrollView = UIScrollView(frame:self.view.bounds)
 scrollView.addRefreshHeader(color: UIColor.blue) {
          //刷新数据
       }
-
 ```
 
 刷新完成之后：
