@@ -9,9 +9,24 @@ tags:
     - Android
 ---
 
-打包脚本基于Python实现，只能在Mac系统上运行
+使用python调用系统的打包命令，打包完成之后将应用包通过curl上传到蒲公英。
+
+python调用系统命令：
+---
+
+```java
+import os
+import sys
+
+project_path = "..."
+//查看版本状态
+os.system('cd %s;git status' % project_path)
+//拉取代码
+os.system('cd %s;git pull' % project_path)
+``
 
 android studio项目打包命令：
+---
 
 ```java
 //clean
