@@ -23,7 +23,7 @@ project_path = "..."
 os.system('cd %s;git status' % project_path)
 //拉取代码
 os.system('cd %s;git pull' % project_path)
-``
+```
 
 android studio项目打包命令：
 ---
