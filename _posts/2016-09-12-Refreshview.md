@@ -59,6 +59,6 @@ scrollView.removeScrollObserver();
 Source
 ---
 
->[Source Swift3](https://github.com/StevenDXC/DxRefreshView)
+>[Swift 3](https://github.com/StevenDXC/DxRefreshView)
 
->[Source Objective-c](https://github.com/StevenDXC/DxRefreshView_OC)
+>[Objective-c](https://github.com/StevenDXC/DxRefreshView_OC)
