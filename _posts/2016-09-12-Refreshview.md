@@ -56,7 +56,8 @@ scrollView.removeScrollObserver();
 4.刷新完成，向上移动隐藏refresh header.并重置状态
 
 
-
+Source
+---
 
 >[Source Swift3](https://github.com/StevenDXC/DxRefreshView)
 
