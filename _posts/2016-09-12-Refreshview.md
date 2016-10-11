@@ -11,7 +11,7 @@ tags:
 
 模仿锤子阅读的下拉刷新效果
 
-demo:
+Demo:
 ---
 
 ![image]({{ site.baseurl }}/img/post/refresh_header.gif)
@@ -54,14 +54,7 @@ scrollView.endRefreshing();
 scrollView.beginRefreshing();
 ```
 
-应用或界面退出时，移除observer:
 
-```Swift
-//oc
-[_scrollView removeScrollObserver];
-//swift
-scrollView.removeScrollObserver();
-```
 
 Source
 ---
