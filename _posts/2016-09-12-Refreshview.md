@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Refresh Header View"
+title:      "模仿锤子阅读的下拉刷新"
 subtitle:   ""
 date:       2016-09-12 14:00:00
 author:     "steven"
