@@ -30,10 +30,12 @@ refreshHeader.actionHandler = ^{
 _scrollView.refreshHeader = refreshHeader;
 
 //swift
-scrollView = UIScrollView(frame:self.view.bounds)
-scrollView.addRefreshHeader(color: UIColor.blue) {
-         //刷新数据
-      }
+let refreshHeader:DxRefreshView = DxRefreshView();
+refreshHeader.color = UIColor.blue;
+refreshHeader.actionHandler = {
+    //刷新数据
+};
+tableView.setRefreshHeader(refreshHeader: refreshHeader);
 ```
 
 刷新完成之后：
