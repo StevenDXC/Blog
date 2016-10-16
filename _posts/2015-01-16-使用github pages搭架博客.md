@@ -2,7 +2,7 @@
 layout:     post
 title:      "使用github pages搭建博客"
 subtitle:   ""
-date:       2015-02-03 11:00:00
+date:       2015-01-03 11:00:00
 author:     "steven"
 catalog:    true
 tags:
