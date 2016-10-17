@@ -67,6 +67,12 @@ reset:
  lb.reset();
 ```
 
+取消loading动画，还原为Btton view
+
+```java
+ lb.cancelLoading();
+```
+
 
 >[source](https://github.com/StevenDXC/DxLoadingButton)
 ---
