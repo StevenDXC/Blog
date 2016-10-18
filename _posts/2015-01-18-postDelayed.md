@@ -9,7 +9,7 @@ tags:
     - Android
 ---
 
-在android中做延时处理一般用handler.postDelayed()和view.postDelayed(action,delay)来实现，view.postDelayed也是通过handlder.postDelayed来实现的，不过有一些不同的地方。
+在android中做延时处理一般用handler.postDelayed()和view.postDelayed(action,delay)来实现，view.postDelayed也是通过handlder.postDelayed来实现的，不过有一些特殊处理的地方。
 
 handler.postDelayed
 ----
@@ -246,8 +246,9 @@ Message next() {
         }
     }
 ```
-mPtr是Native使用的一个变量，来标识消息循环是否被取消或已经处理。
-进入死循环，以参数timout=0调用nativePollOnce方法。nativePollOnce()的作用类似与object.wait()，使用了nvtive方法来对线程进行精确时间的唤醒，
+
+
+该方法会先调用nativePollOnce阻塞，然后进入死循环。nativePollOnce()的作用类似与object.wait()，使用了nvtive方法来对线程进行精确时间的唤醒，
 如果head Message是有延迟而且延迟时间没到的（now < msg.when），计算下时间间隔（nextPollTimeoutMillis），设置timeout为两者之差，进入下一次循环。
 如果Message无延时或已到达执行时间，则直接返回该Message.
 
@@ -278,6 +279,8 @@ public boolean postDelayed(Runnable action, long delayMillis) {
 若view的AttachInfo不为空，则调用AttachInfo中的handler的postDelayed。若AttachInfo为空，则先将action放入RunQueue中。RunQueue为HandlerActionQueue，用来存放view没有handler时的action。
 
 执行action：
+
+
 ```java
 public void executeActions(Handler handler) {
     synchronized (this) {
@@ -292,6 +295,7 @@ public void executeActions(Handler handler) {
     }
 }
 ```
+
 还是需要传入一个Handler，利用handler来执行action。当view被关联到window时，会执行该队列中的Action.   
 
 AttachInfo是View的一个附加信息存储类，当view被关联到window时会被赋值。
