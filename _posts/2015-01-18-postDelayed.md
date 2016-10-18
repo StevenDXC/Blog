@@ -248,7 +248,7 @@ Message next() {
 ```
 
 
-该方法会先调用nativePollOnce阻塞，然后进入死循环。nativePollOnce()的作用类似与object.wait()，使用了nvtive方法来对线程进行精确时间的唤醒，
+该方法会先调用nativePollOnce阻塞，然后进入死循环。nativePollOnce()的作用类似与object.wait()，使用了native方法来对线程进行精确时间的唤醒，
 如果head Message是有延迟而且延迟时间没到的（now < msg.when），计算下时间间隔（nextPollTimeoutMillis），设置timeout为两者之差，进入下一次循环。
 如果Message无延时或已到达执行时间，则直接返回该Message.
 
