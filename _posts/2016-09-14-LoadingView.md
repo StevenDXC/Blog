@@ -14,7 +14,7 @@ android Loading view animation
 demo:
 ---
 
-![image]({{ site.baseurl }}/img/post/loadng_view.gif)
+![image]({{ site.baseurl }}/img/post/loading_view.gif)
 
 Usage:
 ---
