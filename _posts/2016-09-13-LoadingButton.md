@@ -53,14 +53,12 @@ lb.setOnClickListener(new View.OnClickListener() {
 ```java
  lb.loadingSuccessful();
 ```
-show failed animation:
 
 请求失败之后，显示失败的动画：
 
 ```java
  lb.loadingFiled();
 ```
-reset:
 
 重置界面的显示为Button状态
 ```java
