@@ -49,7 +49,7 @@ loadingView.cancelAnimation();
 
 
 
-参考设计:https://www.uplabs.com/posts/liquid-motion-marketing
+参考:https://www.uplabs.com/posts/liquid-motion-marketing
 
 
 
