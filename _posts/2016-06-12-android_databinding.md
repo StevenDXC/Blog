@@ -584,12 +584,12 @@ user.add(17);
 数据绑定在上面的布局下将会自动生成下面的变量：
 
 public final TextView firstName;
+
 public final TextView lastName;
 
 Variables：
 
 每个layout中声明的Variables对象，都应该声明对应的操作方法：
-
 
 ```xml
 <data>
@@ -609,7 +609,6 @@ public abstract Drawable getImage();
 public abstract void setImage(Drawable image);
 public abstract String getNote();
 public abstract void setNote(String note);
-
 ```
 
 8.ViewStubs
@@ -698,13 +697,17 @@ BindingAdapter是很有用的去自定义别的属性，例如，自定的加载
 当适配器冲突的时候，开发者定义的BindingAdapter将覆盖默认的适配器。
 一个适配器也可以绑定多个属性
 
+```java
 @BindingAdapter({"bind:imageUrl", "bind:error"})
 public static void loadImage(ImageView view, String url, Drawable error) {
    Picasso.with(view.getContext()).load(url).error(error).into(view);
 }
+```
 
+```xml
 <ImageView app:imageUrl="@{venue.imageUrl}"
 app:error="@{@drawable/venueError}"/>
+```
 
 绑定适配器的方法可能需要持有旧的值，采用旧值和新值的方法应该首先具有属性的所有旧值，然后是新值，
 
