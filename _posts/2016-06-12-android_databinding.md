@@ -57,10 +57,14 @@ android {
 </layout>  
 ```
 
-Android DataBinding的布局文件必须与<layout>标签为起点。<data>标签内就是这个布局要绑定的数据。
+Android DataBinding的布局文件必须与<layout>标签为起点。
+
+<data>标签内就是这个布局要绑定的数据。
 variable表示一个可能会在这个布局中作用的属性。
 一个<data>标签内可以包含多个variable标签，即一个布局可以绑定多个数据对象类
 variable的name就是这个布局中引用该数据对象的名称，type为该数据对象对应的类，通常为包名+类名
+
+
 布局属性的设置使用“@{ }”语法
 
 
@@ -254,7 +258,7 @@ import和Java的import的功能类似，在layout文件中使用该标签导入�
 在编译时会检查引入的变量，如果一个变量继承了Observable或Observable集合对象，那会通过反射得到，如没有实现Observable接口，则数据的变化不会被观察。
 
 
-自定义绑定类型名称
+2.自定义绑定类型名称
 
 绑定类可以被重命名或放在不同的包中通过class标签
 
@@ -281,7 +285,7 @@ import和Java的import的功能类似，在layout文件中使用该标签导入�
 </data>  
 ```
 
-includes
+3.includes
 
 和layout的include标签一致，可以在一个布局中引入另一个布局,并绑定数据：
 
@@ -307,6 +311,7 @@ merge标签不支持include数据绑定
 
 
 表达式语法
+---
 
 表达式语法跟java语法很像，下面的一样的语法：
 
@@ -366,7 +371,8 @@ android:text="@{user.displayName ?? user.lastName}"
 android:text="@{user.displayName != null ? user.displayName : user.lastName}"
 ```
 
-集合：
+4.集合：
+
 
 ```xml
 <data>
@@ -399,7 +405,7 @@ android:text="@{map[`firstName`}"
 android:text="@{map["firstName"]}"  
 ```
 
-Resources：
+5.Resources：
 
 与布局一致，可以使用表达式：
 
@@ -426,12 +432,12 @@ Have %d oranges
 android:text="@{@plurals/orange(orangeCount, orangeCount)}"
 ```
 
-数据对象
+6.数据对象
 
 要使数据对象可监控，必须实现Observable接口，有三种不同的可观察的数据机制：Observable objects, observable fields, and observable collections.
 
 
-Observable objects：
+· Observable objects：
 
 一个可以监控对象的接口实现，可以把监听器和对象绑定，可以监听所有属性的变化
 
@@ -463,7 +469,7 @@ private static class User extends BaseObservable {
 数据发生改变时，应该在setter方法用调用notifyPropertyChanged方法来通知监听器。
 
 
- ObservableFields：
+· ObservableFields：
 
  如果一个类中只有几个变量需要监控，那可以不集成BaseObservable类，使用ObservableFields来监控。
  一些基本类型的字段监控类： ObservableBoolean, ObservableByte, ObservableChar, ObservableShort, ObservableInt, ObservableLong, ObservableFloat, ObservableDouble, 和ObservableParcelable.
@@ -491,17 +497,19 @@ int age = user.age.get();
 
 ```
 
-Observable Collections：
+· Observable Collections：
 
  ObservableArrayMap：
-
- ObservableArrayMap<String, Object> user = new ObservableArrayMap<>();
+```java
+ObservableArrayMap<String, Object> user = new ObservableArrayMap<>();
 user.put("firstName", "Google");
 user.put("lastName", "Inc.");
 user.put("age", 17);
+```
 
 layout：
 
+```xml
 <data>
     <import type="android.databinding.ObservableMap"/>
     <variable name="user" type="ObservableMap&lt;String, Object&gt;"/>
@@ -515,15 +523,18 @@ layout：
    android:text='@{String.valueOf(1 + (Integer)user["age"])}'
    android:layout_width="wrap_content"
    android:layout_height="wrap_content"/>
-
+```
 
 ObservableArrayList：
 
+```java
 ObservableArrayList<Object> user = new ObservableArrayList<>();
 user.add("Google");
 user.add("Inc.");
 user.add(17);
+```
 
+```xml
 <data>
     <import type="android.databinding.ObservableList"/>
     <import type="com.example.my.app.Fields"/>
@@ -538,12 +549,15 @@ user.add(17);
    android:text='@{String.valueOf(1 + (Integer)user[Fields.AGE])}'
    android:layout_width="wrap_content"
    android:layout_height="wrap_content"/>
+```
 
-
-Views With IDs
+7.Views With IDs
 
 当一个Layout中的view声明了ID时，会自动生成对应的public final变量。数据绑定通过View的结构提取出有ID的view。这种机制比调用findViewById更高效
 
+
+
+```xml
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
    <data>
        <variable name="user" type="com.example.User"/>
@@ -562,6 +576,7 @@ Views With IDs
   android:id="@+id/lastName"/>
    </LinearLayout>
 </layout>
+```
 
 数据绑定在上面的布局下将会自动生成下面的变量：
 
@@ -570,9 +585,10 @@ public final TextView lastName;
 
 Variables：
 
-
 每个layout中声明的Variables对象，都应该声明对应的操作方法：
 
+
+```xml
 <data>
     <import type="android.graphics.drawable.Drawable"/>
     <variable name="user"  type="com.example.User"/>
@@ -580,7 +596,10 @@ Variables：
     <variable name="note"  type="String"/>
 </data>
 
+```
 
+
+```java
 public abstract com.example.User getUser();
 public abstract void setUser(com.example.User user);
 public abstract Drawable getImage();
@@ -588,8 +607,9 @@ public abstract void setImage(Drawable image);
 public abstract String getNote();
 public abstract void setNote(String note);
 
+```
 
-ViewStubs
+8.ViewStubs
 
 ViewStub和常规的View不太一样，它开始的时候是不可见的，可以延迟到运行时填充布局资源。
 
@@ -605,20 +625,22 @@ ViewStub和常规的View不太一样，它开始的时候是不可见的，可�
 
 布局有时候要绑定的数据对象是不确定的，例如：RecyclerView.Adapter，必须在onBindViewHolder中指定绑定值，才可以识别出对应的绑定类。
 
+```java
 public void onBindViewHolder(BindingHolder holder, int position) {
    final T item = mItems.get(position);
    holder.getBinding().setVariable(BR.item, item);
    holder.getBinding().executePendingBindings();
 }
+```
 
 上面这个例子中，RecyclerView绑定的所有layout有一个item变量，BindingHolder有一个getBinding方法来获取ViewDataBinding对象
 
 
-2.立即绑定
+· 立即绑定
 
 当一个变量或Observable对象发生变化时，绑定应该在下一帧之前按序进行改变，但是有时候需要立即执行绑定，可以调用 executePendingBindings()方法强制执行绑定
 
-3.后台线程：
+· 后台线程：
 可以改变你的数据对象在后台线程，除了集合。数据绑定将会本地化保存每一个变量/字段，防止并发错误
 
 Attribute Setters：
@@ -631,22 +653,26 @@ Attribute Setters：
 数据绑定会自动寻找参数对应的setter方法，跟命名空间无关，只跟属性的名称相关。
 例如：textview 在不居中通过android:text赋值之后，会自动寻找setText(String)方法，如果表达式返回的是Int类型，熟悉绑定会自动寻找setText(Int)方法。所以要确保表达式返回的类型正确。若需要可以转换。即使没有给定的属性，数据绑定也会执行。可以通过数据绑定调用setter方法创建属性。例如，DrawerLayout没有任何属性，但有很多setter方法，可以调用setter方法自动创建属性。
 
+```xml
 android.support.v4.widget.DrawerLayout  
     android:layout_width="wrap_content"  
     android:layout_height="wrap_content"  
     app:scrimColor="@{@color/scrim}"  
     app:drawerListener="@{fragment.drawerListener}"/>  
+```
 
 2.重命名Setters
 
 一些属性的setter方法与名称不一致，可以通过BindingMethods注解关联名称和方法。
 例如：可以将android:tint 属性与setImageTintList(ColorStateList)方法相关联
 
+```java
 @BindingMethods({  
        @BindingMethod(type = "android.widget.ImageView",  
                       attribute = "android:tint",  
                       method = "setImageTintList"),  
 })  
+```
 
 开发者不需要重命名setter方法，数据绑定框架已经实现。
 
@@ -655,6 +681,7 @@ android.support.v4.widget.DrawerLayout
 
 有一些参数需要自定义绑定逻辑，如：android:paddingLeft属性没有setter方法，但是有一个setPadding(left,top,right,bottom)方法，@BindingAdapter可以自定义怎么绑定该属性
 
+```java
 @BindingAdapter("android:paddingLeft")
 public static void setPaddingLeft(View view, int padding) {
    view.setPadding(padding,
@@ -662,6 +689,7 @@ public static void setPaddingLeft(View view, int padding) {
                    view.getPaddingRight(),
                    view.getPaddingBottom());
 }
+```
 
 BindingAdapter是很有用的去自定义别的属性，例如，自定的加载器可以利用空线程加载图片。
 当适配器冲突的时候，开发者定义的BindingAdapter将覆盖默认的适配器。
@@ -677,6 +705,7 @@ app:error="@{@drawable/venueError}"/>
 
 绑定适配器的方法可能需要持有旧的值，采用旧值和新值的方法应该首先具有属性的所有旧值，然后是新值，
 
+```java
 @BindingAdapter("android:paddingLeft")  
 public static void setPaddingLeft(View view, int oldPadding, int newPadding) {  
    if (oldPadding != newPadding) {  
@@ -686,9 +715,11 @@ public static void setPaddingLeft(View view, int oldPadding, int newPadding) {
                        view.getPaddingBottom());  
    }  
 }  
+```
 
 事件处理只能使用接口或有抽象方法的抽象类
 
+```java
 @BindingAdapter("android:onLayoutChange")
 public static void setOnLayoutChangeListener(View view, View.OnLayoutChangeListener oldValue,
        View.OnLayoutChangeListener newValue) {
@@ -701,10 +732,12 @@ public static void setOnLayoutChangeListener(View view, View.OnLayoutChangeListe
         }
     }
 }
+```
 
 
 当一个监听器有多个方法的时候，必须拆分进多个监听器。例如 View.OnAttachStateChangeListener有两个方法：
 
+```java
 @TargetApi(VERSION_CODES.HONEYCOMB_MR1)
 public interface OnViewDetachedFromWindow {
     void onViewDetachedFromWindow(View v);
@@ -714,9 +747,11 @@ public interface OnViewDetachedFromWindow {
 public interface OnViewAttachedToWindow {
     void onViewAttachedToWindow(View v);
 }
+```
 
 因为改变一个监听器方法的时候会影响到另一个，所以要提供三个绑定适配器，添加一个适配器来同时处理两个事件：
 
+```java
 @BindingAdapter("android:onViewAttachedToWindow")
 public static void setListener(View view, OnViewAttachedToWindow attached) {
     setListener(view, null, attached);
@@ -761,55 +796,70 @@ public static void setListener(View view, final OnViewDetachedFromWindow detach,
         }
     }
 }
+```
 
- android.databinding.adapters.ListenerUtil类用来帮助跟踪之前的监听器，保证之前的监听器被移除
+android.databinding.adapters.ListenerUtil类用来帮助跟踪之前的监听器，保证之前的监听器被移除
 
 
 3.转换器
 
 当一个对象从绑定表达式中被返回，对象的setter方法将会从自动，重命名和自定义setter中选择，对象会被转化为setter指定的类型
 例如：
+
+```xml
 <TextView
    android:text='@{userMap["lastName"]}'
    android:layout_width="wrap_content"
    android:layout_height="wrap_content"/>
+```
 
 userMap 是一个ObservableMaps，userMap返回一个对象，对象将会被转化为字段对应的类型在setter方法中setText(CharSequence)。当参数类型不明确的时候，开发者应该在表达式中转化
 
 自定义转化器
 
 有时候转换器应该自动转化两个特殊类型的对象，如：
+
+```xml
 <View
    android:background="@{isError ? @color/red : @color/white}"
    android:layout_width="wrap_content"
    android:layout_height="wrap_content"/>
+```
 
 background参数类型是Drawable,而color是Int，无论预期的是Drawable还是int类型，int类型都应该被转换为colorDrawable.
 
+
+```java
 @BindingConversion
 public static ColorDrawable convertColorToDrawable(int color) {
    return new ColorDrawable(color);
 }
+```
 
 注意：转化只能发生在setter级别，所以不允许在表达式中使用混合类型：
 
+
+```xml
 <View
    android:background="@{isError ? @drawable/error : @color/white}"
    android:layout_width="wrap_content"
    android:layout_height="wrap_content"/>
 
+```
 
 
 Android studio对DataBinding的支持
-
+---
 Android studio支持DataBinding的多种代码边距功能，例如：
 
 语法高亮显示，在编辑器中显示语法错误，xml代码自动补全，引用，代码源码导航。
 
 布局预览也支持在表达式中设置默认值，例如：
 
+```
 <TextView android:layout_width="wrap_content"
    android:layout_height="wrap_content"
    android:text="@{user.firstName, default=PLACEHOLDER}"/>
+```
 
 在预览页面中该TextView的文本将会显示为PLACEHOLDER。如果在设计时需要显示不同的值，也可以使用tools参数代替表达式中的default值。
