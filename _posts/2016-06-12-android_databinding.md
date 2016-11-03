@@ -356,8 +356,11 @@ android:transitionName='@{"image_" + id}'
 不支持的：
 
 · this
+
 · super
+
 · new
+
 · Explicit generic invocation
 
 NULL 判断：
@@ -373,6 +376,7 @@ android:text="@{user.displayName != null ? user.displayName : user.lastName}"
 
 4.集合：
 
+array:
 
 ```xml
 <data>
@@ -394,7 +398,6 @@ android:text="@{map[key]}"
 ```
 
 Map:
-
 
 由于Map的key为字符串，在XML中引用map的子项也是双引号，所以可以使用单引号和`：
 
@@ -439,9 +442,7 @@ android:text="@{@plurals/orange(orangeCount, orangeCount)}"
 
 · Observable objects：
 
-一个可以监控对象的接口实现，可以把监听器和对象绑定，可以监听所有属性的变化
-
-要实现一个可监控数据对象，该对象(POJO)需继承BaseObservable对象：
+一个可以监控对象的接口实现，可以把监听器和对象绑定，可以监听所有属性的变化.要实现一个可监控数据对象，该对象(POJO)需继承BaseObservable对象：
 
 ```java
 private static class User extends BaseObservable {
@@ -465,7 +466,7 @@ private static class User extends BaseObservable {
    }
 }
 ```
-@Bindable是一个注解，来标注该属性是可以监控的，在编译时会生成BR类，放在module的包下
+@Bindable是一个注解，来标注该属性是可以监控的，在编译时会生成BR类，放在module的包下.
 数据发生改变时，应该在setter方法用调用notifyPropertyChanged方法来通知监听器。
 
 
@@ -500,6 +501,8 @@ int age = user.age.get();
 · Observable Collections：
 
  ObservableArrayMap：
+ 
+ 
 ```java
 ObservableArrayMap<String, Object> user = new ObservableArrayMap<>();
 user.put("firstName", "Google");
