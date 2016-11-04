@@ -11,7 +11,7 @@ tags:
 
 早就看到Google出了一个MVVM的框架，找个机会上手了下，发现用起来没那么复杂，所以就写了一个简单的Demo。
 
-![image](https://github.com/StevenDXC/AndroidDataBindingDemo/blob/master/art/databinding.gif)
+![image]({{ site.baseurl }}/img/post/databinding.gif)
 
 这个Demo的内容很简单，就是获取github的repo列表，点击repo列表某项的时候跳转到对应的项目页面（HTML）。
 
@@ -45,3 +45,4 @@ layout 比较简单，只使用了基本的字段绑定和点击事件绑定，�
 
 
 [Source](https://github.com/StevenDXC/AndroidDataBindingDemo)
+---
