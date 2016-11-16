@@ -57,11 +57,11 @@ android {
 </layout>  
 ```
 
-Android DataBinding的布局文件必须与<layout>标签为起点。
+Android DataBinding的布局文件必须与\<layout\>标签为起点。
 
-<data>标签内就是这个布局要绑定的数据。
+\<data\>标签内就是这个布局要绑定的数据。
 variable表示一个可能会在这个布局中作用的属性。
-一个<data>标签内可以包含多个variable标签，即一个布局可以绑定多个数据对象类
+一个\<data\>标签内可以包含多个variable标签，即一个布局可以绑定多个数据对象类
 variable的name就是这个布局中引用该数据对象的名称，type为该数据对象对应的类，通常为包名+类名
 
 
