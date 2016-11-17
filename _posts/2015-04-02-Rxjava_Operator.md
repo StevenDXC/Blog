@@ -2,14 +2,14 @@
 layout:     post
 title:      "RxJava操作符"
 subtitle:   ""
-date:       2015-03-29 12:00:00
+date:       2015-04-02 13:00:00
 author:     "steven"
 catalog:    true
 tags:
     - Android
 ---
 
-Rxjava 组合操作符
+RxJava 组合操作符
 
 本文所用的到Observable对象和subscriber：
 
