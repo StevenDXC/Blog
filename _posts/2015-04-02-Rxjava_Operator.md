@@ -45,10 +45,12 @@ Observable.amb(o1,o2,o3).subscribe(subscriber);
 ```
 输出日志：
 
+```java
 onNext:21
 onNext:22
 onNext:23
 onCompleted
+```
 
 concat
 ---
@@ -58,6 +60,7 @@ Concat操作符将多个Observable结合成一个Observable并发射数据，并
 ```java
 Observable.concat(o1,o2,o3).subscribe(subscriber);
 ```
+
 输出：
 
 ```java
