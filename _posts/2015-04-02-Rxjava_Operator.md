@@ -79,6 +79,7 @@ onCompleted
 
 若中间发生错误，则调用onError结束执行，不再发射后面的数据
 
+
 ```java
 Observable.concat(o1,o4,o2).subscribe(subscriber);
 ```
@@ -90,7 +91,7 @@ onNext:1
 onNext:2
 onNext:3
 onError:java.lang.Throwable: --->error<---
-```j
+```
 
 concatDelayError:若其中的某个Observable发生错误，则继续执行完后面的Observable，将发生错误的Observable放在最后。
 
