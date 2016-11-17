@@ -60,6 +60,7 @@ Observable.concat(o1,o2,o3).subscribe(subscriber);
 ```
 输出：
 
+```java
 onNext:1
 onNext:2
 onNext:3
@@ -70,6 +71,7 @@ onNext:21
 onNext:22
 onNext:23
 onCompleted
+```
 
 若中间发生错误，则调用onError结束执行，不再发射后面的数据
 
@@ -79,11 +81,12 @@ Observable.concat(o1,o4,o2).subscribe(subscriber);
 
 输出：
 
+```java
 onNext:1
 onNext:2
 onNext:3
 onError:java.lang.Throwable: --->error<---
-
+```j
 
 concatDelayError:若其中的某个Observable发生错误，则继续执行完后面的Observable，将发生错误的Observable放在最后。
 
@@ -94,6 +97,7 @@ Observable.concatDelayError(o4,o1,o2).subscribe(subscriber);
 
 输出日志：
 
+```java
 onNext:1
 onNext:2
 onNext:3
@@ -101,7 +105,7 @@ onNext:11
 onNext:12
 onNext:13
 onError:java.lang.Throwable: --->error<---
-
+```
 
 concatEager:与concat基本逻辑一致，不同的是一旦合并后的Observable被订阅，operator订阅所有的原始Observable，operator缓存每个Observable发射出来的值，所有Observable发射完成之后，operator将所有缓存的值按顺序一次排放出来。
 
@@ -109,6 +113,7 @@ concatEager:与concat基本逻辑一致，不同的是一旦合并后的Observab
 Observable.concatEager(o1,o2,o3).subscribe(subscriber);
 ```
 
+```java
 onNext:1
 onNext:2
 onNext:3
@@ -119,6 +124,8 @@ onNext:21
 onNext:22
 onNext:23
 onCompleted
+```
+
 
 merge
 ---
@@ -131,6 +138,7 @@ Observable.merge(o1,o2,o3).subscribe(subscriber);
 
 输出：
 
+```java
 onNext:21
 onNext:22
 onNext:23
@@ -141,6 +149,7 @@ onNext:1
 onNext:2
 onNext:3
 onCompleted
+```
 
 mergeDelayError:与concatDelayError的DelayError逻辑一致
 
@@ -150,6 +159,7 @@ Observable.mergeDelayError(o4,o2,o3).subscribe(subscriber);
 
 输出：
 
+```java
 onNext:21
 onNext:22
 onNext:23
@@ -157,7 +167,7 @@ onNext:11
 onNext:12
 onNext:13
 onError:java.lang.Throwable: --->error<---
-
+```
 
 zip
 ---
@@ -176,12 +186,13 @@ Observable.zip(o1, o2, o3, new Func3<Integer, Integer, Integer, Integer>() {
 
 输出：
 
+```java
 call:1---11---21
 onNext:33
 call:2---12---22
 onNext:36
 onCompleted
-
+```
 
 combineLatest
 ---
@@ -200,8 +211,10 @@ Observable.combineLatest(o1, o2, o3, new Func3<Integer, Integer, Integer, Intege
 
 输出：
 
+```java
 call:1---13--23
 onNext:37
 call:2---13--23
 onNext:38
 onCompleted
+```
