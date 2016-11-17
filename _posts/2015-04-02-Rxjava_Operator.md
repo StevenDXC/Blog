@@ -43,7 +43,8 @@ amb
 ```java
 Observable.amb(o1,o2,o3).subscribe(subscriber);
 ```
-输出日志：
+
+输出：
 
 ```java
 onNext:21
