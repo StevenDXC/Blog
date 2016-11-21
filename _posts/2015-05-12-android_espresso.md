@@ -166,12 +166,12 @@ onData(allOf(is(instanceOf(Map.class)),hasEntry(equalTo(LongListActivity.ROW_TEX
  ViewActions.clearText() 清除文本框的文本
 
 
- Espresso-Intents
- ---
+Espresso-Intents
+---
 
- Espresso Intents 用来验证和模拟应用发出的Intent
+Espresso Intents 用来验证和模拟应用发出的Intent
 
- 添加依赖：
+添加依赖：
 
 ```java
  dependencies {
