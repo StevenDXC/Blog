@@ -227,10 +227,12 @@ Espresso Web是用来测试WebView的一个组件，它使用 WebDriver API来�
 
 添加依赖：
 
+```java
 dependencies {
-  // Other dependencies ...
   androidTestCompile 'com.android.support.test.espresso:espresso-web:2.2.2'
 }
+
+```
 
 要测试WebView，需要在WebView中允许运行JavaScript。
 
@@ -300,7 +302,6 @@ registerIdleTransitionCallback：通常此方法用于存储对回调的引用�
 
 
 例：等待登录接口返回结果
-
 
 ```java
 private class LoginIdlingResource implements IdlingResource {
