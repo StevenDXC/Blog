@@ -17,7 +17,7 @@ Small是2015年底新出来的一个插件化App开发方案，适用于将一�
 
 Small的实现方式：
 
-. small的gradle插件生成的是.so包，在初始化的时候会通过.so文件生成zip文件，在由zip文件生成Dex,反射添加到宿主类加载器的dexPathList里面
+. Small的gradle插件生成的是.so包，在初始化的时候会通过.so文件生成zip文件，在由zip文件生成Dex,反射添加到宿主类加载器的dexPathList里面
 
 . 资源文件处理：Small插件的资源是可以共享的，所有插件可以通过共用一个AssetManager互相访问资源文件，而且通过修改aapt解决了资源Id冲突的问题。
 
@@ -120,9 +120,12 @@ public void onCreate() {
     }
 }
 ```
-small 跳转插件页面是通过uri来指定的，一个uri唯一对应一个插件。  pkg为包名。若一个插件有多个页面供其他插件或宿主调用，则用rules区分。
 
-如启动home插件界面：
+Small 跳转插件页面是通过uri来指定的，一个uri唯一对应一个插件. pkg为包名,若一个插件有多个页面供其他插件或宿主调用，则用rules区分。
+
+例如：
+
+启动home插件界面：
 
 ```java
 Small.openUri("home", context);
