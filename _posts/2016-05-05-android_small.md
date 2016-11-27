@@ -17,23 +17,23 @@ Small是2015年底新出来的一个插件化App开发方案，适用于将一�
 
 Small的实现方式：
 
-.small的gradle插件生成的是.so包，在初始化的时候会通过.so文件生成zip文件，在由zip文件生成Dex,反射添加到宿主类加载器的dexPathList里面
+>small的gradle插件生成的是.so包，在初始化的时候会通过.so文件生成zip文件，在由zip文件生成Dex,反射添加到宿主类加载器的dexPathList里面
 
-.资源文件处理：Small插件的资源是可以共享的，所有插件可以通过共用一个AssetManager互相访问资源文件，而且通过修改aapt解决了资源Id冲突的问题。
+>资源文件处理：Small插件的资源是可以共享的，所有插件可以通过共用一个AssetManager互相访问资源文件，而且通过修改aapt解决了资源Id冲突的问题。
 
-.之前的插件化方案都是到宿主工程里先注册Activity占位，然后通过占位Activity将生命周期回调传递给插件的Activity.而Small则是通过替换Activity里    的mInstrumentation对象，在Instrumentation的newActivty实现中实例化了插件的Activity.
+>之前的插件化方案都是到宿主工程里先注册Activity占位，然后通过占位Activity将生命周期回调传递给插件的Activity.而Small则是通过替换Activity里    的mInstrumentation对象，在Instrumentation的newActivty实现中实例化了插件的Activity.
 
 Small的优点：
 
-.所有插件可内置于宿主包中
+1. 所有插件可内置于宿主包中
 
-.插件可以独立开发与调试
+2. 插件可以独立开发与调试
 
-.资源彻底分离，并且可以互相访问
+3. 资源彻底分离，并且可以互相访问
 
-.通过URI，宿主可以启动本地化插件，web组件，现在网页和任何自定义的插件，并传递参数
+4. 通过URI，宿主可以启动本地化插件，web组件，现在网页和任何自定义的插件，并传递参数
 
-.跨平台，目前已经支持android,IOS及Html5
+5. 跨平台，目前已经支持android,IOS及Html5
 
 使用：
 
@@ -190,8 +190,7 @@ Intent intent = Small.getIntentOfUri("main",context)
 
 
   ```java
-./gradlew :app.main:assembleRelease
-
-```
+   ./gradlew :app.main:assembleRelease
+  ```
 
  然后就可以运行App了
