@@ -58,11 +58,13 @@ apply plugin: 'net.wequick.small'
 ```
 
 3.创建Module:
-    因为 Small会根据包名对插件进行归类，所以要求：
-    模块命名：”app.*” ,”lib.*” 或 “web.*”
-     包名包含：“.app.”, “.lib.” 或 “.web.”
+  因为 Small会根据包名对插件进行归类，所以要求：
+    
+  模块命名：”app.\*” ,”lib.\*” 或 “web.\*”
+  
+  包名包含：“.app.”, “.lib.” 或 “.web.”
 
-lib.* 为Android Library模块，app.*为Phone & Tablet模块
+   lib.* 为Android Library模块，app.*为Phone & Tablet模块
 
 4.配置签名
  在app模块的build.gradle中增加签名配置
@@ -87,13 +89,11 @@ buildTypes {
  6.在app模块的Application中配置：
 
  ```java
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        Small.preSetUp(this);
-    }
+@Override
+public void onCreate() {
+   super.onCreate();
+   Small.preSetUp(this);
+}
 ```    
 
 7.在app模块的assert/bundle.json中声明插件，格式：
@@ -143,7 +143,6 @@ Small.openUri("home？from=main", context);
 
 获取参数：
 
-
 ```java
 Uri uri = Small.getUri(this);
 if (uri != null) {
@@ -155,42 +154,35 @@ if (uri != null) {
 
 ```java
 Fragment fragment = Small.createObject("fragment-v4", uri, context);
-
 ```
 
 获取Intent:
 
 不是直接打开界面,而是从别的地方进入页面，如点击通知
 
-
 ```java
 Intent intent = Small.getIntentOfUri("main",context)
-
 ```
 
 8.编译
 
   编译插件：
 
-    ```java
-    ./gradlew Build libraries  -q
-
-    ```
-     -q 为安静模式，可以忽略
+```java
+./gradlew Build libraries  -q
+```
+  -q 为安静模式，可以忽略
 
    打包所有组件：
 
-
-   ```java
-   ./gradlew buildBundle
-
-   ```
+```java
+./gradlew buildBundle
+```
 
   编译单个组件：
 
-
-  ```java
-   ./gradlew :app.main:assembleRelease
-  ```
+```java
+./gradlew :app.main:assembleRelease
+```
 
  然后就可以运行App了
