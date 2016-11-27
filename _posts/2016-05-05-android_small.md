@@ -36,6 +36,7 @@ Small的优点：
 5. 跨平台，目前已经支持android,IOS及Html5
 
 使用：
+---
 
 1.使用Android studio创建一个项目
 
