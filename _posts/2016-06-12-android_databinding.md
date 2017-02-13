@@ -6,7 +6,7 @@ date:       2016-08-12 13:00:00
 author:     "steven"
 catalog: true
 tags:
-    - IOS
+    - Android
 ---
 
 Android DataBinding 是google在android上对MVVM设计模式的一个实现框架，目前还在测试阶段，稳定性，性能和兼容性还存在一些问题，所以目前在稳定版本的App上应用的还很少。
