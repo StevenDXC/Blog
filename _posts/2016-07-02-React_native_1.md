@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "React Native Navigation"
+title:      "React-Native Navigation"
 subtitle:   ""
 date:       2016-08-20 9:00:00
 author:     "steven"
