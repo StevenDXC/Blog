@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:      "React-Native Navigation"
+title:      "ReactNative Navigation"
 subtitle:   ""
-date:       2016-08-20 9:00:00
+date:       2016-08-20 10:00:00
 author:     "steven"
 catalog: true
 tags:
-    - React Native
+    - ReactNative
 ---
 
 
