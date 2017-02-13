@@ -6,7 +6,7 @@ date:       2016-08-13 17:00:00
 author:     "steven"
 catalog: true
 tags:
-    - IOS
+    - Android
 ---
 
 早就看到Google出了一个MVVM的框架，找个机会上手了下，发现用起来没那么复杂，所以就写了一个简单的Demo。
