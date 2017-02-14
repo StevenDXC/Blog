@@ -2,7 +2,7 @@
 layout: post
 title: "ReactNative Navigator"
 subtitle: ""
-date: 2016-09-18 15:00:00
+date: 2016-09-18 15:00:00 +0800
 author: "steven"
 catalog: true
 tags:
