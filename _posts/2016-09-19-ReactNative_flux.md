@@ -87,4 +87,4 @@ Actions.pop() //pop当前场景
 Actions.refresh(PARAMS)
 ```   
 
-api文档：https://github.com/aksonov/react-native-router-flux/blob/master/docs/API_CONFIGURATION.md
+API文档：https://github.com/aksonov/react-native-router-flux/blob/master/docs/API_CONFIGURATION.md
