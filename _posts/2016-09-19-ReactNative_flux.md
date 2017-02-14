@@ -88,4 +88,7 @@ Actions.refresh(PARAMS)
 ```   
 
 
+<br/>
+<br/>
+
 [#API文档](https://github.com/aksonov/react-native-router-flux/blob/master/docs/API_CONFIGURATION.md)
