@@ -4,7 +4,7 @@ title:      "android postDelayed实现"
 subtitle:   ""
 date:       2015-01-18 12:00:00
 author:     "steven"
-catalog: true
+catalog:    true
 tags:
     - Android
 ---

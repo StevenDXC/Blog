@@ -4,7 +4,7 @@ title:      "LoadingButton"
 subtitle:   ""
 date:       2016-09-13 09:00:00
 author:     "steven"
-catalog: true
+catalog:    true
 tags:
     - Android
 ---

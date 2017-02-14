@@ -4,7 +4,7 @@ title:      "Android DataBinding"
 subtitle:   ""
 date:       2016-08-12 13:00:00
 author:     "steven"
-catalog: true
+catalog:    true
 tags:
     - Android
 ---
@@ -501,8 +501,8 @@ int age = user.age.get();
 · Observable Collections：
 
  ObservableArrayMap：
- 
- 
+
+
 ```java
 ObservableArrayMap<String, Object> user = new ObservableArrayMap<>();
 user.put("firstName", "Google");

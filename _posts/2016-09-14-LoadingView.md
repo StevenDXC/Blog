@@ -4,7 +4,7 @@ title:      "LoadingView"
 subtitle:   ""
 date:       2016-09-15 11:00:00
 author:     "steven"
-catalog: true
+catalog:    true
 tags:
     - Android
 ---

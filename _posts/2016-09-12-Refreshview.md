@@ -4,7 +4,7 @@ title:      "模仿锤子阅读的下拉刷新"
 subtitle:   ""
 date:       2016-09-12 14:00:00
 author:     "steven"
-catalog: true
+catalog:    true
 tags:
     - IOS
 ---

@@ -4,7 +4,7 @@ title:      "git提交信息规范"
 subtitle:   ""
 date:       2015-01-20 13:00:00
 author:     "steven"
-catalog: true
+catalog:    true
 tags:
     - git
 ---
