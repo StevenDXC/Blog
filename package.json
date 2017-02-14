@@ -1,14 +1,14 @@
 {
-    "name": "hux-blog",
-    "title": "Hux Blog",
-    "author": "Hux <huxpro@gmail.com>",
-    "version": "1.6.0",
-    "homepage": "http://huxpro.github.io",
+    "name": "App develop note",
+    "title": "App develop note",
+    "author": "Steven Cheng",
+    "version": "1.3.0",
+    "homepage": "stevendxc.github.io/Blog/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Huxpro/huxpro.github.io"
+        "url": "https://github.com/StevenDXC/Blog"
     },
-    "bugs": "https://github.com/Huxpro/huxpro.github.io/issues",
+    "bugs": "https://github.com/StevenDXC/Blog/issues",
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-less": "~0.11.4",
