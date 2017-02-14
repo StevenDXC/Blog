@@ -1,12 +1,12 @@
 # Site settings
-title: App develop note
-SEOTitle:  Index
-header-img: img/home-bg.jpg
-email: chengxd3@gmail.com
-description: "About Mobile App develop"
-keyword: ""
-url: "https://stevendxc.github.io/Blog/"      # your host, for absolute URL
-baseurl: "/Blog"                              # for example, '/blog' if your blog hosted on 'host/blog'https://stevendxc.github.io/Blog
+title:App develop note
+SEOTitle:Index
+header-img:img/home-bg.jpg
+email:chengxd3@gmail.com
+description:"About Mobile App develop"
+keyword:""
+url:"https://stevendxc.github.io/Blog/"      # your host, for absolute URL
+baseurl:"/Blog"                              # for example, '/blog' if your blog hosted on 'host/blog'https://stevendxc.github.io/Blog
 
 
 
