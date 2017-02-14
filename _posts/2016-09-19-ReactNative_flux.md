@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ReactNative flux"
+title: "ReactNative Flux"
 subtitle: ""
 date: 2016-09-19 15:00:00
 author: "steven"
