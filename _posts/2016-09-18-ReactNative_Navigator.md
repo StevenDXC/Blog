@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "ReactNative Navigator"
+title:      "ReactNative-Navigator"
 subtitle:   ""
 date:       2016-09-18 15:00:00
 author:     "steven"
