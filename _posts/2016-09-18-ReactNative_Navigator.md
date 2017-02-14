@@ -1,6 +1,10 @@
 ---
 layout:     post
+<<<<<<< HEAD
 title:      "ReactNativeNavigator"
+=======
+title:      "ReactNative-Navigator"
+>>>>>>> origin/gh-pages
 subtitle:   ""
 date:       2016-09-18 15:00:00
 author:     "steven"

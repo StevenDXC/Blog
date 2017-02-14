@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: chengxd3@gmail.com
 description: "About Mobile App develop"
 keyword: ""
-url: "https://stevendxc.github.io/Blog/"              # your host, for absolute URL
-baseurl: "/Blog"                             # for example, '/blog' if your blog hosted on 'host/blog'https://stevendxc.github.io/Blog
+url: "https://stevendxc.github.io/Blog/"      # your host, for absolute URL
+baseurl: "/Blog"                              # for example, '/blog' if your blog hosted on 'host/blog'https://stevendxc.github.io/Blog
 
 
 
@@ -16,8 +16,6 @@ weibo_username:     Simplefunction
 zhihu_username:     xdcheng
 github_username:    stevendxc
 twitter_username:   chengxd
-#facebook_username:  huxpro
-# linkedin_username:  firstname-lastname-idxxxx
 
 
 # Gems
@@ -29,10 +27,11 @@ gems: [jekyll-paginate,jekyll-gist]
 #from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 20
+paginate: 30
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
-anchorjs: true
-                        # if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
+
+
 # Markdown settings
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
@@ -43,8 +42,6 @@ kramdown:
   input: GFM
 
 # use Github Flavored Markdown !important
-
-
 
 # Disqus settings
 #disqus_username: _your_disqus_short_name_
@@ -75,4 +72,4 @@ sidebar-avatar: img/avatar.jpg      # use absolute URL, seeing it's used in both
 
 # Featured Tags
 featured-tags: false                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 1               # A tag will be featured if the size of it is more than this condition value
