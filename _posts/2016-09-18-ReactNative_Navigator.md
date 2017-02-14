@@ -190,12 +190,11 @@ configureScene={(route, routeStack) =>
 
 ### Props
 
-```javascript
-configureScene:配置转场动画及手势
-initialRouteStack:初始化已经声明的场景集合
-onDidFocus:完成转场之后新场景中将被调用
-onWillFocus:转场动画开始之前在新场景中被调用
-```
+* configureScene:配置转场动画及手势
+* initialRouteStack:初始化已经声明的场景集合
+* onDidFocus:完成转场之后新场景中将被调用
+* onWillFocus:转场动画开始之前在新场景中被调用
+
 
 ### 方法
 
