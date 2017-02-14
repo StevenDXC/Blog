@@ -83,21 +83,20 @@ this.props.navigator.resetTo(route);
 
 ```javascript
 
-barTintColor: navigationbar的背景颜色
-interactivePopGestureEnabled: 是否激活手势返回上一页
+barTintColor:navigationbar的背景颜色
+interactivePopGestureEnabled:是否激活手势返回上一页
 navigationBarHidden：是否隐藏navigationBar
-shadowHidden：是否影藏navigationBar下方的1个像素高度的引用。
-tintColor：navigationBar上button的颜色
-titleTextColor：navigationBar标题的颜色
-translucent：是否半透明
-backButtonTitle: 返回按钮的标题
-backButtonIcon: 返回按钮的图标
-leftButtonTitle: 左边按钮的标题
-rightButtonTitle: 右边边按钮的标题
-leftButtonIcon: 左边按钮的图标
-rightButtonIcon: 右边按钮的图标
-onRightButtonPress/onLeftButtonPress:
-左边或右边按钮的点击事件
+shadowHidden:是否影藏navigationBar下方的1个像素高度的引用。
+tintColor:navigationBar上button的颜色
+titleTextColor:navigationBar标题的颜色
+translucent:是否半透明
+backButtonTitle:返回按钮的标题
+backButtonIcon:返回按钮的图标
+leftButtonTitle:左边按钮的标题
+rightButtonTitle:右边边按钮的标题
+leftButtonIcon:左边按钮的图标
+rightButtonIcon:右边按钮的图标
+onRightButtonPress/onLeftButtonPress:左边或右边按钮的点击事件
 ```
 
 ## Navigator
@@ -194,10 +193,10 @@ configureScene={(route, routeStack) =>
 ### Props
 
 ```javascript
-configureScene：配置转场动画及手势
-initialRouteStack：初始化已经声明的场景集合
-onDidFocus：完成转场之后新场景中将被调用
-onWillFocus：转场动画开始之前在新场景中被调用
+configureScene:配置转场动画及手势
+initialRouteStack:初始化已经声明的场景集合
+onDidFocus:完成转场之后新场景中将被调用
+onWillFocus:转场动画开始之前在新场景中被调用
 ```
 
 ### 方法
