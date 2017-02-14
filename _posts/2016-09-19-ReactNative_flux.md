@@ -77,8 +77,8 @@ Actions.ACTION_NAME(PARAMS) //如跳转到login，Actions.login
 
 ```javascript
 Actions.pop() //pop当前场景
-   {popNum: [number]} 可以弹出多个场景
-   {refresh: {...propsToSetOnPreviousScene}} 刷新并跳转某个场景
+   {popNum: [number]} //可以弹出多个场景
+   {refresh: {...propsToSetOnPreviousScene}} //刷新并跳转某个场景
 ```
 
 刷新当前场景：
