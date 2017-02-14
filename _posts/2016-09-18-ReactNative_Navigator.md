@@ -1,14 +1,10 @@
 ---
-layout:     post
-<<<<<<< HEAD
-title:      "ReactNativeNavigator"
-=======
-title:      "ReactNative-Navigator"
->>>>>>> origin/gh-pages
-subtitle:   ""
-date:       2016-09-18 15:00:00
-author:     "steven"
-catalog:    true
+layout: post
+title: "ReactNative Navigator"
+subtitle: ""
+date: 2016-09-18 15:00:00
+author: "steven"
+catalog: true
 tags:
     - ReactNative
 ---
@@ -24,12 +20,16 @@ NavigatorIOS是IOS中UINavigationController的包装，功能基本和UINavigati
 
 ```javascript
 <NavigatorIOS
-    initialRoute={{
-       component: MyScene,
-       title: 'My Initial Scene',
-       passProps:{ myProp: 'genius' },
-   }}
-   style={{flex: 1}}
+    initialRoute={
+       {
+           component:MyScene,
+           title:'My Initial Scene',
+           passProps:{ myProp:'genius' },
+        }
+     }
+   style={
+     {flex:1}
+   }
 />
 ```
 
@@ -108,12 +108,18 @@ Navigator是用来处理两个场景之间的切换，同时兼容IOS和Android.
 
 ```javascript
 <Navigator
-   style={{flex:1}}
-    initialRoute={{ title: 'Awesome Scene', index: 0 }}
-    renderScene={(route, navigator) =>
+   style={
+     {flex:1}
+   }
+   initialRoute={
+     { title: 'Awesome Scene', index: 0 }
+   }
+   renderScene={(route, navigator) =>
         <Text>Hello {route.title}!</Text>
    }
-   style={{padding: 100}}
+   style={
+     {padding: 100}
+   }
 );
 ```
 
@@ -139,15 +145,25 @@ const routes = [
 ```javascript
  navigationBar={
      <Navigator.NavigationBar
-       routeMapper={{
-         LeftButton: (route, navigator, index, navState) =>
-          { return (<Text>Cancel</Text>); },
-         RightButton: (route, navigator, index, navState) =>
-           { return (<Text>Done</Text>); },
-         Title: (route, navigator, index, navState) =>
-           { return (<Text>Awesome Nav Bar</Text>); },
-       }}
-       style={{backgroundColor: 'gray'}}
+       routeMapper={
+          {
+           LeftButton: (route, navigator, index, navState) =>
+           {
+                return (<Text>Cancel</Text>);
+           },
+           RightButton: (route, navigator, index, navState) =>
+           {
+              return (<Text>Done</Text>);
+           },
+          Title: (route, navigator, index, navState) =>
+          {
+             return (<Text>Awesome Nav Bar</Text>);
+          },
+        }
+     }
+       style={
+         {backgroundColor: 'gray'}
+       }
      />
   }
 ```
