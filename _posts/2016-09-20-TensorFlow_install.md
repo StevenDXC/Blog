@@ -10,9 +10,6 @@ tags:
 ---
 
 
-
-## 安装
-
 在Mac上安装TensorFlow有以下种方式：
 
 * virtualenv
@@ -49,7 +46,7 @@ git checkout Branch  #选择版本，如r1.0
 * TensorFlow Python dependencies
 * NVIDIA packages to support TensorFlow for GPU(如要运行支持GPU版本的Tensorflow)
 
-安装bazel：
+bazel：
 
 安装Homebrew
 
@@ -70,8 +67,6 @@ TensorFlow Python dependencies：
 * six
 * numpy
 * wheel
-
-安装:
 
 ```shell
 sudo pip install six numpy wheel
@@ -164,6 +159,7 @@ docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow
 docker会自动下载tensorflow镜像并安装执行。国内需要翻墙
 
 3. 使用virtualenv安装
+---
 
  * 需要先安装pip(Pip是一个python的软件包管理系统，可以安装，卸载和管理软件包)
 
@@ -236,6 +232,7 @@ pip3 uninstall tensorflow
 ```
 
 5.使用Anaconda安装
+---
 
 Anaconda是一个用于科学计算的Python发行版，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。
 
@@ -279,7 +276,7 @@ python      #若同时安装了python2和python3，请确认当前的Python版�
 >>> print(sess.run(hello))
 ```
 
-1. 执行之后输出以下文本即安装成功：
+1. 执行之后输出以下消息即安装成功：
 ```shell
 Hello, TensorFlow!
 ```
