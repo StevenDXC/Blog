@@ -287,7 +287,7 @@ python      #若同时安装了python2和python3，请确认当前的Python版�
 Hello, TensorFlow!
 ```
 
-## 附 Mac中卸载Python
+## 附：Mac中卸载Python
 
 1. 删除python framework文件夹
 
