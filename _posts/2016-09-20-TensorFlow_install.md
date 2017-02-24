@@ -20,12 +20,12 @@ tags:
 
 其中 virtualenv和Anaconda其实都是使用Pip来下载安装的。
 
-1. 从源码安装
+##从源码安装
 ---
 
 * 由于Windows上无法编译Tensorflow，所以暂时无法在Windows上通过源码安装。
    
-1. clone源码   
+clone源码   
 
 ```shell
 git clone https://github.com/tensorflow/tensorflow 
@@ -143,8 +143,7 @@ bazel build --config=opt --config=cuda //tensorflow/tools/pip_package:build_pip_
 sudo pip install /tmp/tensorflow_pkg/tensorflow-1.0.0-py2-none-any.whl
 ```
 
-2. 使用Docker安装
----
+##使用Docker安装
 
 目前只能在mac上通过Docker安装使用CPU的TensorFlow,暂不支持安装GPU版本：
 
@@ -210,8 +209,7 @@ pip3 install --upgrade \
 rm -r ~/tensorflow
 ```
 
-4. 使用native pip安装
----
+##使用native pip安装
 
 也需要先安装Pip，如上，不再赘述。
 
@@ -231,8 +229,7 @@ pip uninstall tensorflow
 pip3 uninstall tensorflow 
 ```
 
-5.使用Anaconda安装
----
+##使用Anaconda安装
 
 Anaconda是一个用于科学计算的Python发行版，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。
 
@@ -262,13 +259,13 @@ TF_PYTHON_URL：参考使用virtualenv安装步骤中的说明
 
 ## 验证安装
 
-1. 打开终端输入
+1.打开终端输入
 
 ```shell
 python      #若同时安装了python2和python3，请确认当前的Python版本
 ```
 
-2. 输入以下文本
+2.输入以下文本
 ```shell
 >>> import tensorflow as tf
 >>> hello = tf.constant('Hello, TensorFlow!')
@@ -276,7 +273,7 @@ python      #若同时安装了python2和python3，请确认当前的Python版�
 >>> print(sess.run(hello))
 ```
 
-1. 执行之后输出以下消息即安装成功：
+3.执行之后输出以下消息即安装成功：
 ```shell
 Hello, TensorFlow!
 ```
