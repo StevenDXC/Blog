@@ -289,7 +289,7 @@ Hello, TensorFlow!
 
 ## 附：Mac中卸载Python
 
-1. 删除python framework文件夹
+1.删除python framework文件夹
 
 ```shell
 sudo rm -rf /Library/Frameworks/Python.framework/Versions/{version}
@@ -297,13 +297,13 @@ sudo rm -rf /Library/Frameworks/Python.framework/Versions/{version}
 
 {version}为要删除的Python的版本
 
-2. 删除python应用
+2.删除python应用
 
 ```shell
 sudo rm -rf "/Applications/Python {version}"
 ```
 
-3. 删除命令连接
+3.删除命令连接
 
 执行的命令在/usr/local/bin中，使用下面的命令可以查看已经连接的命令
 
@@ -318,6 +318,6 @@ cd /usr/local/bin/
 ls -l /usr/local/bin | grep '../Library/Frameworks/Python.framework/Versions/{version}' | awk '{print $9}' | tr -d @ | xargs rm
 ```
 
-4. 删除系统环境配置中定义的python变量
+4.删除系统环境配置中定义的python变量
 
 在系统~/.bash_login, ~/.bash_profile, ~/.cshrc, ~/.profile, ~/.tcshrc, and/or ~/.zprofile等文件中删除声明的python的环境变量。
