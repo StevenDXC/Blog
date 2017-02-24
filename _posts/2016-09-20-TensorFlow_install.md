@@ -145,7 +145,7 @@ sudo pip install /tmp/tensorflow_pkg/tensorflow-1.0.0-py2-none-any.whl
 
 ## 使用Docker安装
 
-**目前只能在mac上通过Docker安装使用CPU的TensorFlow,暂不支持安装GPU版本.
+**目前只能在mac上通过Docker安装使用CPU的TensorFlow,暂不支持安装GPU版本**
 
 1.先去官网下载安装Docker应用 https://www.docker.com/products/docker#/mac
 
