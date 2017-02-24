@@ -9,7 +9,6 @@ tags:
     - AI
 ---
 
-
 在Mac上安装TensorFlow有以下种方式：
 
 * virtualenv
@@ -20,12 +19,12 @@ tags:
 
 其中 virtualenv和Anaconda其实都是使用Pip来下载安装的。
 
-##从源码安装
+## 从源码安装
 ---
 
 * 由于Windows上无法编译Tensorflow，所以暂时无法在Windows上通过源码安装。
    
-clone源码   
+1.clone源码   
 
 ```shell
 git clone https://github.com/tensorflow/tensorflow 
@@ -78,7 +77,7 @@ sudo pip install six numpy wheel
 brew install coreutils
 ```
 
-3. 配置安装环境
+3.配置安装环境
 
 TensorFlow根文件下有个configure文件，这个脚本配置编译时依赖工具的路径和其他环境配置。
 例子：
@@ -123,7 +122,7 @@ Setting up CUPTI lib64
 Configuration finished
 ```
 
-4. 编译
+4.编译
 
 编译CPU版本：
 
@@ -143,7 +142,8 @@ bazel build --config=opt --config=cuda //tensorflow/tools/pip_package:build_pip_
 sudo pip install /tmp/tensorflow_pkg/tensorflow-1.0.0-py2-none-any.whl
 ```
 
-##使用Docker安装
+
+## 使用Docker安装
 
 目前只能在mac上通过Docker安装使用CPU的TensorFlow,暂不支持安装GPU版本：
 
@@ -157,24 +157,24 @@ docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow
 
 docker会自动下载tensorflow镜像并安装执行。国内需要翻墙
 
-3. 使用virtualenv安装
----
+## 使用virtualenv安装
 
- * 需要先安装pip(Pip是一个python的软件包管理系统，可以安装，卸载和管理软件包)
+1.需要先安装pip(Pip是一个python的软件包管理系统，可以安装，卸载和管理软件包)
 
 ```shell
 sudo easy_install pip                     #安装Pip
 sudo pip install --upgrade virtualenv     #安装virtualenv
 ```
 
-* 创建virtualenv运行环境：
+2.创建virtualenv运行环境：
+
 ```shell
 virtualenv --system-site-packages targetDirectory
 ```
 
 targetDirectory：指定项目的目录，一般是 ~/tensorflow
 
-* 激活virtualenv环境
+3.激活virtualenv环境
 
 ```shell
 source ~/tensorflow/bin/activate
@@ -209,7 +209,7 @@ pip3 install --upgrade \
 rm -r ~/tensorflow
 ```
 
-##使用native pip安装
+## 使用native pip安装
 
 也需要先安装Pip，如上，不再赘述。
 
@@ -229,27 +229,28 @@ pip uninstall tensorflow
 pip3 uninstall tensorflow 
 ```
 
-##使用Anaconda安装
+## 使用Anaconda安装
 
 Anaconda是一个用于科学计算的Python发行版，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。
 
-1. 到官网下载Anaconda(https://www.continuum.io/downloads),下载Command Line Installer版本.
-2. 打开终端输入命令安装：
+1.到官网下载Anaconda(https://www.continuum.io/downloads),下载Command Line Installer版本.
+
+2.打开终端输入命令安装：
 ```shell
 bash Anaconda2-4.3.0-MacOSX-x86_64.sh   #python2.7
 bash Anaconda3-4.3.0-MacOSX-x86_64.sh   #python 3.x 
 ```
-3. 创建执行环境
+3.创建执行环境
 ```shell
  conda create -n tensorflow
 ```
-4. 激活TensorFlow
+4.激活TensorFlow
 ```shell
 source activate tensorflow
 (tensorflow)$  # Your prompt should change
 ```
-
 执行时出行错误的时候使用下面的命令安装：
+
 ```shell
 pip install --ignore-installed --upgrade $TF_PYTHON_URL 
 ```
