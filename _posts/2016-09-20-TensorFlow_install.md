@@ -12,7 +12,7 @@ tags:
 在Mac上安装TensorFlow有以下种方式：
 
 * virtualenv
-* pip “native”
+* Pip “native”
 * Docker
 * 从源码安装
 * Anaconda
@@ -22,7 +22,7 @@ tags:
 ## 从源码安装
 ---
 
-* 由于Windows上无法编译Tensorflow，所以暂时无法在Windows上通过源码安装。
+**由于Windows上无法编译Tensorflow，所以暂时无法在Windows上通过源码安装**
    
 1.clone源码   
 
@@ -145,7 +145,7 @@ sudo pip install /tmp/tensorflow_pkg/tensorflow-1.0.0-py2-none-any.whl
 
 ## 使用Docker安装
 
->目前只能在mac上通过Docker安装使用CPU的TensorFlow,暂不支持安装GPU版本.
+**目前只能在mac上通过Docker安装使用CPU的TensorFlow,暂不支持安装GPU版本.
 
 1.先去官网下载安装Docker应用 https://www.docker.com/products/docker#/mac
 
@@ -216,7 +216,7 @@ rm -r ~/tensorflow
 
 也需要先安装Pip，如上，不再赘述。
 
-安装和使用virtualenv的步骤类似：
+安装
 
 ```shell
 pip install --upgrade tensorflow      # for Python 2.7
@@ -241,7 +241,7 @@ Anaconda是一个用于科学计算的Python发行版，提供了包管理与环
 2.打开终端输入命令安装：
 
 ```shell
-bash Anaconda2-4.3.0-MacOSX-x86_64.sh   #python2.7
+bash Anaconda2-4.3.0-MacOSX-x86_64.sh   #python 2.7
 bash Anaconda3-4.3.0-MacOSX-x86_64.sh   #python 3.x 
 ```
 
