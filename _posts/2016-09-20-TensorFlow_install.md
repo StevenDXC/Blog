@@ -61,7 +61,7 @@ brew install bazel
 
 TensorFlow Python dependencies：
 
-依赖的python工具有：
+依赖的python工具：
 
 * six
 * numpy
@@ -145,11 +145,13 @@ sudo pip install /tmp/tensorflow_pkg/tensorflow-1.0.0-py2-none-any.whl
 
 ## 使用Docker安装
 
-目前只能在mac上通过Docker安装使用CPU的TensorFlow,暂不支持安装GPU版本：
+>目前只能在mac上通过Docker安装使用CPU的TensorFlow,暂不支持安装GPU版本.
 
-* 先去官网下载安装Docker应用 https://www.docker.com/products/docker#/mac
-* 安装完成之后运行docker,启动虚拟镜像
-* 运行终端输入命令：
+1.先去官网下载安装Docker应用 https://www.docker.com/products/docker#/mac
+
+2.安装完成之后运行docker,启动虚拟镜像
+
+3.运行终端输入命令：
 
 ```shell
 docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow
@@ -198,6 +200,7 @@ pip3 install --upgrade TF_BINARY_URL  # Python 3.N
 ```
 
 TF_BINARY_URL：定义了TensorFlow python安装包的URL，通过系统的版本，python的版本和是否支持GPU来找到正确的URL，如在Python 3.4环境下安装cpu版本的命令为：
+
 ```shell
 pip3 install --upgrade \
  https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.0.0-py3-none-any.whl
@@ -236,15 +239,19 @@ Anaconda是一个用于科学计算的Python发行版，提供了包管理与环
 1.到官网下载Anaconda(https://www.continuum.io/downloads),下载Command Line Installer版本.
 
 2.打开终端输入命令安装：
+
 ```shell
 bash Anaconda2-4.3.0-MacOSX-x86_64.sh   #python2.7
 bash Anaconda3-4.3.0-MacOSX-x86_64.sh   #python 3.x 
 ```
+
 3.创建执行环境
+
 ```shell
  conda create -n tensorflow
 ```
 4.激活TensorFlow
+
 ```shell
 source activate tensorflow
 (tensorflow)$  # Your prompt should change
@@ -267,6 +274,7 @@ python      #若同时安装了python2和python3，请确认当前的Python版�
 ```
 
 2.输入以下文本
+
 ```shell
 >>> import tensorflow as tf
 >>> hello = tf.constant('Hello, TensorFlow!')
