@@ -2,7 +2,7 @@
 layout: post
 title: "TensorFlow安装"
 subtitle: ""
-date: 2016-09-12 14:00:00
+date: 2016-09-20 14:00:00
 author: "steven"
 catalog: true
 tags:
