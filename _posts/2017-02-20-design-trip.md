@@ -1,6 +1,6 @@
 ---
-layout: [Design]旅行行程
-title: "TensorFlow安装"
+layout: post
+title: "[Design]旅行行程"
 subtitle: ""
 date: 2017-02-20 17:00:00
 author: "steven"
