@@ -9,4 +9,4 @@ tags:
     - Design
 ---
 
-![image]({{ site.baseurl }}/img/post/tripdemo.jpg)
+![image]({{ site.baseurl }}/img/post/tripdemo.png)
