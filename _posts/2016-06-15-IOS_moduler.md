@@ -61,7 +61,7 @@ IOS的组件化实现方案目前有两种：
 
 BeeHive是阿里开源的IOS模块化编程的框架实现方案,吸收了Spring框架Service的理念来实现模块间的API耦合
 
-()
+![image]({{ site.baseurl }}/img/post/beehive.jpg)
 
 通过BHCore创建，注册模块，实现Service逻辑。BHModuleProtocol定义了Module的生命周期回调接口和系统事件，BHServiceManager收到事件之后会分给所有实现BHModuleProtocol相应接口的Module
 
