@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IOS组件化的思考”
+title: "IOS组件化的思考"
 subtitle: ""
 date: 2016-06-23 14:00:00
 author: "steven"
