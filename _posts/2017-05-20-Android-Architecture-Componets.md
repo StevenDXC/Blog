@@ -15,11 +15,11 @@ tags:
 
 ![image]({{ site.baseurl }}/img/post/android_architecture.png)
 
-View层：还是acitivty/fragment
+View层：acitivty/fragment
 
 ViewModel:用来和View和model层交互，与之前的Android databinding不同的是，这次改为使用LiveData来存放和监控数据的变化
 
-Repository：通过网络，db或缓存获取数据，并将数据提供给ViewMode,并负责数据的更新和同步。
+Repository：通过网络，db或缓存获取数据，并将数据提供给ViewMode,并负责数据的更新和同步。
 
 model:获取，更新本地数据，包括缓存和db
 
